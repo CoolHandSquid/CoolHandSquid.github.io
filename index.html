@@ -401,14 +401,15 @@
                     <h2 class="section-heading text-uppercase">Contact me</h2>
                     <h3 class="section-subheading text-muted">Hit me up, I'll hit you up. Go Team</h3>
                 </div>
-                <form action="https://formspree.io/f/mpzojggd" method="POST" id="contactForm" novalidate="novalidate">
+                <form action="https://formspree.io/f/mpzojggd" method="POST" id="contactForm" novalidate="novalidate" name="sentMessage">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
-				<div class="form-group">
-                                <input class="form-control" name="name" id="full-name" type="text" placeholder="Your Name *" required="" data-validation-required-message="Please enter your name." />
-				<p class="help-block text-danger"></p>
+							<div class="form-group">
+                                <input class="form-control" name="name" id="name" type="text" placeholder="Your Name *" required="" data-validation-required-message="Please enter your name." />
+								<p class="help-block text-danger"></p>
+							</div>
                             <div class="form-group">
-                                <input class="form-control" type="text" name="_replyto" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
+                                <input class="form-control" id="email" type="text" name="_replyto" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group mb-md-0">
