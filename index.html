@@ -402,7 +402,7 @@
                     <h2 class="section-heading text-uppercase">Contact me</h2>
                     <h3 class="section-subheading text-muted">Hit me up, I'll hit you up. Go Team</h3>
                 </div>
-                <form action="https://formspree.io/f/mpzojggd" method="POST">
+                <form action="https://formspree.io/f/mpzojggd" method="POST" id="contactForm" novalidate="novalidate">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
 				<div class="form-group">
@@ -416,8 +416,7 @@
 							<div class="form-group mb-md-0">
                                 <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
                                 <p class="help-block text-danger"></p>
-                            </div>
-							-->
+                            </div> -->
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
@@ -432,21 +431,7 @@
                     </div>
                 </form>
             </div>
-        </section>
-	<!-- Test -->
-	<form	action="https://formspree.io/f/mpzojggd" method="POST">
-  		<label> Your email:
- 			<input type="text" name="_replyto">
-  		</label>
-  		<label>Your message:<textarea name="message"></textarea></label>
-		<!-- your other form fields go here -->
-		<button type="submit">Send</button>
-	</form>
-	<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-	<script>
-		window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-		formbutton("create", {action: "https://formspree.io/f/mpzojggd"})
-  	</script>		
+        </section>	
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
