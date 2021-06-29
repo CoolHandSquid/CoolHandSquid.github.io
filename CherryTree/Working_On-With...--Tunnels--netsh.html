@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>netsh</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>netsh</h1><br/>#Must be admin to use netsh<br />#View current port proxies<br />netsh interface portproxy show all<br /><br />#Create a portproxy<br />netsh interface portproxy set v4tov4 listenport=3232 connectaddress=github.com connectport=443 protocol=tcp<br />#could be used to expose internal port#<br /><br />#Verify portproxy is listening<br />netstat -nato | findstr 3232<br /><br />#View portproxy in reg<br />reg query hklm\system\currentcontrolset\services\portproxy /s<br /><br />#Delete a portproxy<br />netsh interface portproxy delete v4tov4 listenport=3232 protocol=tcp<br />netsh interface portproxy delete v4tov4 listenport=10500 listenaddress=192.168.0.9 protocol=TCP<br /><br /><br /><br /><br /><br />netsh interface portproxy delete v4tov4 listenport=10300 listenaddress=192.168.0.12 protocol=TCP</div></body></html>

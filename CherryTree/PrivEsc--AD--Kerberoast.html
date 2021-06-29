@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Kerberoast</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Kerberoast</h1><br/>What is Kerberoasting?<br />When a TGS_REQ is requested a TGS_RES is returned without authentication (The authentication (group access) is to be done by the application after the AP_REQ). The TGS_RES sent to the requesting computer is encoded with the hash of the password of the SPN owner. Brute forcing the TGS_RES can be done quickly and silently (done offline) leaving someone with the password for the SPN that shold not have it. Keep in mind that they will still need to be able to determine who the password belongs to and the SPN owner may not be obvious. <br /><br /><a href="https://www.blackhillsinfosec.com/a-toast-to-kerberoast/">https://www.blackhillsinfosec.com/a-toast-to-kerberoast/</a><br /></div></body></html>

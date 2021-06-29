@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Scanning</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Scanning</h1><br/>pingsweep<br />nmap -sn 172.16.15.15<br /><br />common ports &amp; SYN stealth scan<br />nmap -sS -v -n --top-ports 500 172.16.15.15 --open<br /><br />Ack scan to detect firewall filtering ports<br />nmap -sS -v -n 172.16.15.15<br /><br />nmap ssh version scanner<br />use auxiliary/scanner/ssh/ssh_version<br /><br />nmap http version scanner<br />use auxiliary/scanner/http/http_version<br /><br /></div></body></html>

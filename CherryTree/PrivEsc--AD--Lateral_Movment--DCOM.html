@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>DCOM</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>DCOM</h1><br/>Where COM is the standard that allows microsoft process&#39;s to talk to each other, DCOM is the same thing but for communication over the network.<br />Outlook, PowerPoint, and Excel have DCOM objects that allow lateral movment.<br />In summary:<br />Create an instance of the System.Activator class (which enables the ability to call the “Run” method via DCOM)<br />Make an Excel document and embed a macro that will run your shellcode.<br />Use the .NET command to move the file to the target machine.<br />Activate the “System” account by giving it a Desktop directory.<br />Useing the “Open” method and the “Workbooks” object we can run the Excel document.<br />Useing DCOM run the macro and catch the rev shell in a nc listener.</div></body></html>

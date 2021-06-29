@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>iptables</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>iptables</h1><br/>lsmod | grep ip_tables<br />lsmod | grep x_tables<br /><br />sudo iptables -L (list rules)<br />sudo iptables -t nat -L<br /><br />sysctl net.ipv4.ip_forward      &lt; check if iprouting is enabled<br />sysctl -w net.ipv4.ip_forward=1     &lt; enable iprouting<br /><br />sudo iptables -L -t nat --line-number<br />sudo iptables -t nat -D POSTROUTING 1<br />sudo iptables -t nat -D PREROUTING 1<br /><br />PREROUTING<br />sudo iptables -t nat -A PREROUTING -p tcp -s 10.50.21.220 --dport 10200 -j DNAT --to-destination 192.168.0.10:22<br /><br />POSTROUTING<br />sudo iptables -t nat -A POSTROUTING -s 10.50.21.220 -p tcp -j SNAT --to-source 192.168.0.99<br /><br />ssh -M -S /tmp/t2  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@10.50.30.20 -p 10200<br /><br /><br /><br /><br /></div></body></html>

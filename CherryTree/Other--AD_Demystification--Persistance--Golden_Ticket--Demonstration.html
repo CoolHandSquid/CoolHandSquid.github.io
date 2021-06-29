@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Demonstration</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Demonstration</h1><br/>We are going to log onto the dc and aquire the hash of the KRBTGT. We will then use that hash to create a “golden ticket” on bossman and psexec into the DC with only a user account.<br /><a href=""><img src="images/1181-1.png" alt="images/1181-1.png" /></a><br />301f73ccb16c24dddc2bd3a3dff7aa43<br /><br />This was run from Bossman (Windows 10) under the context of Squid (domain user) in a non-elevated command prompt.<br />First we get the domain SID (all but the last tach and four charchters), then demonstrate that we do not have the ability to psexec to DC01.<br /><a href=""><img src="images/1181-2.png" alt="images/1181-2.png" /></a><br />Useing mimikatz we create a golden ticket and use the /ptt argument to put it in memory.<br /><a href=""><img src="images/1181-3.png" alt="images/1181-3.png" /></a><br />In a new shell we attempt to psexec to DC01 again, only this time with success!<br /><a href=""><img src="images/1181-4.png" alt="images/1181-4.png" /></a><br /><br />Note - If we were to connect using PsExec to the IP address of the domain controller instead of the hostname, we would instead force the use of NTLM authentication and access would still be blocked as the next listing shows. <br /><br /><a href=""><img src="images/1181-5.png" alt="images/1181-5.png" /></a><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></body></html>

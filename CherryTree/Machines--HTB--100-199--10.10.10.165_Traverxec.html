@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.10.10.165 Traverxec</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.10.10.165 Traverxec</h1><br/>Nmap showed that port 80 and 22 were open.<br />dirsearch on port 80 showed the directory /%20.php<br />That dir showed that webserver nostromo 1.9.6 was running.<br /><a href="https://www.exploit-db.com/raw/47837">https://www.exploit-db.com/raw/47837</a> is an exploit for nostromo 1.9.6 that lets me run commands<br />nc one-liner and listerner gives me a reverse shell as www-data!<br /><br />the /var/nostromo/conf/.htpasswd showed me<br />david:$1$e7NfNpNi$A6nCwOTqrNR2oDuIKirRZ/<br />hashcat hash finder showed me that it was a -m 500 (md5crypt)<br />hashcat showed me the corresponding password was Nowonly4me<br /><br />/var/nostromo/conf/nhttpd.conf showed me that the dir /home/david/public_www existed<br />in this dir was  backup-ssh-identity-files.tgz<br />copy to /dev/shm<br />unzip with tar<br />dump id_rsa to screen!<br />copy id_rsa to kali<br />ssh2john &gt; id_rsa.john<br />use john to crack the id_rsa hash, got the passcode hunter<br />chmod 600 id_rsa<br />ssh -i id_rsa david@10.10.10.165<br />hunter<br />we are david!!<br /><br />in david dir there is a script that shows us we can run sudo journalctl <br />journalctl has a vulnerability that dumbs you into less if the screen is realllllllllllllly tiny<br />make screen small<br />run the proscribed journalctl command<br />we are in less!!<br />!/bin/bash<br />whoami<br />    root!!<br /></div></body></html>

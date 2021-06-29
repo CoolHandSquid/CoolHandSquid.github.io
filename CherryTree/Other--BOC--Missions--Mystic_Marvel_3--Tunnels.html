@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Tunnels</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Tunnels</h1><br/>To T1 and forward to all others--<br />ssh -M -S /tmp/t1 -p 22 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@10.50.30.20 -L10200:192.168.0.10:22 -L10300:192.168.0.27:22 -L10400:192.168.0.23:22 -L10500:192.168.0.13:22<br />ssh -S /tmp/t1 dum@127.0.0.1<br /><br />t2<br />ssh -M -S /tmp/t2 -p 10200 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1<br />ssh -S /tmp/t2 dum@127.0.0.1<br /><br />t3<br />ssh -M -S /tmp/t3 -p 10300 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1<br />ssh -S /tmp/t3 dum@127.0.0.1<br /><br />t4<br />ssh -M -S /tmp/t4 -p 10400 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1<br />ssh -S /tmp/t4 dum@127.0.0.1<br /><br />t5<br />ssh -M -S /tmp/t5 -p 10500 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1<br />ssh -S /tmp/t5 dum@127.0.0.1<br /><br />password14</div></body></html>

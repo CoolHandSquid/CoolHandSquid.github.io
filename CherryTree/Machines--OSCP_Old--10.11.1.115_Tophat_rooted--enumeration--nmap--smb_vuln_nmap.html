@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>smb vuln nmap</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>smb vuln nmap</h1><br/>PORT    STATE  SERVICE      REASON<br />139/tcp open   netbios-ssn  syn-ack<br />445/tcp closed microsoft-ds conn-refused<br /><br />Host script results:<br />| smb-vuln-cve2009-3103: <br />|   VULNERABLE:<br />|   SMBv2 exploit (CVE-2009-3103, Microsoft Security Advisory 975497)<br />|     State: VULNERABLE<br />|     IDs:  CVE:CVE-2009-3103<br />|           Array index error in the SMBv2 protocol implementation in srv2.sys in Microsoft Windows Vista Gold, SP1, and SP2,<br />|           Windows Server 2008 Gold and SP2, and Windows 7 RC allows remote attackers to execute arbitrary code or cause a<br />|           denial of service (system crash) via an &amp; (ampersand) character in a Process ID High header field in a NEGOTIATE<br />|           PROTOCOL REQUEST packet, which triggers an attempted dereference of an out-of-bounds memory location,<br />|           aka &quot;SMBv2 Negotiation Vulnerability.&quot;<br />|           <br />|     Disclosure date: 2009-09-08<br />|     References:<br />|       http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3103<br />|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3103<br />|_smb-vuln-ms10-054: false<br />|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [14]<br /><br /></div></body></html>

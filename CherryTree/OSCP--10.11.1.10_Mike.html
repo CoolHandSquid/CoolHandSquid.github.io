@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.11.1.10 Mike</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.11.1.10 Mike</h1><br/>Nmap showed that only 80 was open.<br />Nikto showed that the machine was running cold fusion 8.<br />Searchsploit showed that there was a potential directory traversal that would dump a hash of the admin creds.<br /><a href="http://10.11.1.10/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en">http://10.11.1.10/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en</a><br />AAFDC23870ECBCD3D557B6423A8982134E17927E<br />Ran the creds against hashcrack.com and got a match for &quot;pass123&quot;<br />The attempt to login was successful.<br />Looking at the Server Settings Mappings node told Chris where the root directory of ColdFusion was.<br />C:\Inetpub\wwwroot\CFIDE\<br />He created a scheduled task to upload a malicious .jsp file and write it to the root direcory of ColdFusion.<br />After he ran the scheduled task he navigated to http:\\10.11.1.10\CFIDE\443.jsp, executing the jsp file and giving him a reverse shell via nc.<br />The shell was already nt authority\system.</div></body></html>

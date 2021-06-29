@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.10.10.74 Chatterbox</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.10.10.74 Chatterbox</h1><br/>nmap showed that nothing was open<br />nmap -p- showed that 9255 and 9256 were open and running achat<br />searchsploit showed that achat was vulnerable to a BO<br />create shellcode for and edit BO 36025.py<br />run it with an nc listener running and get a reverse shell as alfred!<br />in basic windows enumeration <br />    reg query &quot;HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon&quot; | findstr /isp &quot;password&quot;<br />    showed that the default password was “Welcome1!”<br />    <br />unfortunaley this machine is wildly unstable so I was not able to verify that this password would work for admin, so ippsec did that for me.<br /><br /><br /><br />also <br />    get-acl root.txt | fl *<br />    showed that root.txt was owned by alfred<br />        cacls root.txt /t /e /p Alfred:F<br />        gave alfred full permissions<br />aaaannnnddddd rooted!!!</div></body></html>

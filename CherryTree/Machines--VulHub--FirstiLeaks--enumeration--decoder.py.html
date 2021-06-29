@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>decoder.py</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>decoder.py</h1><br/>import base64,codecs,sys<br /><br />def encodeString(str):<br />        base64string=   base64.b64encode(str)<br />        return codecs.encode(base64string[::-1], &#39;rot13&#39;)<br /><br />def decodestring(str):<br />        str     = str [::-1]<br />        string  = str.encode(&quot;rot13&quot;)<br />        return base64.b64decode(string)<br />print decodestring(&quot;=RFn0AKnlMHMPIzpyuTI0ITG&quot;)<br /><br /><br /><br /><br /><br />root@kali:~/Desktop/Machines/VulnHub/Fristileaks# python decoder.py <br />LetThereBeFristi!<br /></div></body></html>

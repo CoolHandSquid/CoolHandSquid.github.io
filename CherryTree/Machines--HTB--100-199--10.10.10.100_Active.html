@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.10.10.100 Active</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.10.10.100 Active</h1><br/>nmap showed that ass loads of ports were open. Most notably 53, 88, and smb<br />long nmap never finished.<br /><br />Enum4Linux showed me that there were shares<br />smbmap showed me that I could anonymous READ ONlY Replication<br />connected with smbclient and get * the entire dir<br />after looking through all the stuff I found username and hashed password in a groups.xml file<br />I used gpp-decrypty (built into kali) to get the password GPPstillStandingStrong2k18 for the user active.htb\SVC_TGS<br /><br />re-running enum4linux with creds was fruitless<br />re-running smbmap with creds showed me READ ONLY  to NETLOGON, SYSVOL, Replication, and Users<br /><br />after paging through all of the stuffs (there was not much other than user.txt) I deemed that I needed to try some stuff with the creds.<br /><br />psexec failed<br />evil-winrm failed<br />kerberoast worked! (GetUserSPNs.py)<br /><br />got be a krbtgt hash<br />hashcat example hash showed me that it was a method 13100<br />put the hash on the local windows box<br />hashcat64.exe -m 13100 yeet\active.txt yeet\rockyou.txt<br />got the creds        administrator Ticketmaster1968<br /><br />lets try psexec again...<br />psexec.py active.htb/svc_tgs@10.10.10.100<br />success!!!<br />root.txt as system</div></body></html>

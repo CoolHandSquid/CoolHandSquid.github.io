@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>rdp nmap</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>rdp nmap</h1><br/>squid@CoolHandKali:/Yeet/Machines/OSCP/7$ nmap -Pn --script rdp* -p 3389 10.11.1.7<br />Starting Nmap 7.80 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2020-04-26 10:56 EDT<br />Nmap scan report for 10.11.1.7<br />Host is up (0.078s latency).<br /><br />PORT     STATE SERVICE<br />3389/tcp open  ms-wbt-server<br />| rdp-enum-encryption: <br />|   Security layer<br />|     CredSSP (NLA): SUCCESS<br />|     CredSSP with Early User Auth: SUCCESS<br />|     RDSTLS: SUCCESS<br />|     SSL: SUCCESS<br />|_  RDP Protocol Version:  RDP 10.5 server<br />| rdp-ntlm-info: <br />|   Target_Name: PEDRO<br />|   NetBIOS_Domain_Name: PEDRO<br />|   NetBIOS_Computer_Name: PEDRO<br />|   DNS_Domain_Name: pedro<br />|   DNS_Computer_Name: pedro<br />|   Product_Version: 10.0.17134<br />|_  System_Time: 2020-04-26T14:54:56+00:00<br /></div></body></html>

@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.11.1.13 Disco</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.11.1.13 Disco</h1><br/>Nmap showed that many ports were open.<br />Chris was able to connect to ftp annonymously and upload files.<br />A all port nmap scan shoed that there was an iis server running on port 4167.<br />Upon further review the webroot of this iis server was also the ftproot.<br />He was able to navigate to a aspx webshell he uploaded and execute code.<br />In the .aspx webshell he was able to run a powershell command uploading Invoke-PowerShellTCP.ps1 into memory giving him a reverse shell as iis apppool\defaultapppool.<br />During enumeration he ran whoami /all, which showed him that iis apppool was had the seimpersonate token, which leaves the machine vulnerale to the juicy potato exploit.<br />When running the juicy potato exploit, he had the elevated process token call run.bat, which contained a powershell one-liner to call another Invoke-PowerShellTCP.ps1 into memory creating another reverse shell on a different port as nt authority\system. <br /><br /><br />0c012af5208bac5826bb9dd4d4caedf8</div></body></html>

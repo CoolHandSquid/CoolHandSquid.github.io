@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>nmap Antivirus scan</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>nmap Antivirus scan</h1><br/>#####################################<br />  # Nmap Antivirus Scan<br />  # Usage: avscan &lt;ip_address&gt;<br />  # &lt;ip_address&gt; uses the nmap format for single ip, or a range.<br />alias avscan=&quot;nmap -sS -Pn $i -p 38293,38292,1110,8086,8087,15000,2967,5051,38292,2221,2222,2223,2224,2225,2226,4711,4712,5555,6646,8081,8443,9090,8742,7000,7001&quot;<br />  # TO DO: Script this alias into a function. Write a loop that searches a PSP list and echoes a PSP <br />  # product name if a port is found open.<br />#####################################<br />alias nsg=&quot;netstat -anp | grep&quot;<br />alias psg=&quot;ps -ef | grep&quot;<br />#####################################<br /></div></body></html>

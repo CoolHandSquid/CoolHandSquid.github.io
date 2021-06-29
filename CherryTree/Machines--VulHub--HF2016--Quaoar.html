@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Quaoar</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Quaoar</h1><br/>nmap showed that 22, 53, 80, 110, 139, 143, 445,  993, 995 were open<br />ssh, nothing fancy<br />53 dns methodology did not show evidence of zone transfers<br />80 showed wordpress (via TireFire)<br />    wpscan -e got us admin admin!<br />    <br />logging into wordpress as an admin alows you to edit plugins<br />find one that is running php and throw in your long php reverseshell shellcode<br />start nc listener<br />save the file and activate the plugin <br />you should now have a shell!!<br /><br />sudo -l         nothing<br />find              nothing<br />uname -a    something, but no gcc<br />/var/www/wordpress/wp-config.php showed my sql creds!!<br /><br />/** MySQL database username */<br />define(&#39;DB_USER&#39;, &#39;root&#39;);<br /><br />/** MySQL database password */<br />define(&#39;DB_PASSWORD&#39;, &#39;rootpassword!&#39;);<br /><br />su -l root -p<br />rootpassword!<br />cat flag</div></body></html>

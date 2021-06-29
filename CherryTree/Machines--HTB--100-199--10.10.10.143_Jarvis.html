@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>10.10.10.143 Jarvis </title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>10.10.10.143 Jarvis </h1><br/>nmap showed that 22, 80, and 64999 were open<br />nothing special about 22<br />64999 just said to play nice<br />In the source code of the index.php on 80 there are links to <a href="http://view-source:http://10.10.10.143/room.php?cod=1">room.php?cod=1</a><br />This looks awfully sql injectionyyyy!!!<br />sqlmap -u &quot;http://10.10.10.143/room.php?cod=2&quot; --risk=3 --level=5 --dbs --dump<br />shows us 4 DB&#39;s!<br />sqlmap -u &quot;http://10.10.10.143/room.php?cod=2&quot; --risk=3 --level=5 --0s-shell -D hotel<br />os-shell!!<br />shell fix<br />sudo -l shows us that we can run /simpler.py as pepper<br />we see that /simpler.py imports os<br />when giving input it denys you from using charachters like ;<br />we got a bash shell by passing     yeet &quot;$(/bin/bash)&quot;<br />got pepper!<br />lse.sh showed that /bin/systemctl had the setuid bit set<br />systemctl is known to be fuckey so I made a new ssh shell&#39;<br />went on gtfo bins and copy&#39;d their code into a nano in the pepper home direcorty with a callback<br />started a listener<br />systemctl start GoFuckYourself.service<br />got root!!</div></body></html>

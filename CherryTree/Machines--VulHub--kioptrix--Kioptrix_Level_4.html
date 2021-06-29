@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Kioptrix Level 4</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Kioptrix Level 4</h1><br/>nmap showed that the machine was running 22, 80, 139, 445<br />dirsearch showed me the directories /robert and /john<br />Kicked off hydra for robert and john and got the passwords<br />john        MyNameIsJohn<br />robert      Some base64 encoded shit<br /><br />Once I got a password I tried it with ssh... Success got a shell!!<br />too bad it is way restricted<br />Research showed that I was looking at lshell... which is written in python... and handles echo weird...<br />echo import os<br />echo os.system(&#39;/bin/bash&#39;)<br />cat /root/congrats.txt<br />    yee</div></body></html>

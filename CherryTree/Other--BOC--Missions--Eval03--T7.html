@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>T7</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>T7</h1><br/>Be advised: I got a weird responce when moving to T7. I anticipate that potentially the local port I am using could be pointing somewhere else (not something I did).  Here is my setup followed by the responce I recieved.<br /><br />root@kali:~/schmid_12-05-21_Eval03# ssh -M -S /tmp/t4 -p 10400 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null user14@127.0.0.1 -L10700:192.168.169.113:33521 <br /><br />root@kali:~/schmid_12-05-21_Eval03# ssh -M -S /tmp/t7-p 10700 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null user14@127.0.0.1<br />ssh: connect to host 0.0.41.204 port 22: Connection timed out<br /><br />I would like permission to connect again while port forwarding 10701 instead of 10700 in an attempt to maneuver past this issue.<br /></div></body></html>
