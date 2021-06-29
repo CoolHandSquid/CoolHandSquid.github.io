@@ -5,7 +5,7 @@
 - 19:-LSyntax
 
 ## Module 1
-Creds
+### Creds
 ```
 kali:root:toortoor!
 40.0.0.101:bob:password1:22
@@ -17,7 +17,7 @@ kali:root:toortoor!
 40.0.0.107:don:60password:8327
 40.0.0.108:grace:password60:7428
 ```  
-Syntax
+### Syntax
 ```bash
 ssh -M -S /tmp/t1 -p 22 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null bob@40.0.0.101
 ssh -S /tmp/t1 dum@127.0.0.1
