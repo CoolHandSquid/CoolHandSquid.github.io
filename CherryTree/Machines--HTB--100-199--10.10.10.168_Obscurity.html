@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.10.10.168 Obscurity</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.10.10.168 Obscurity</h1><br/><a href=""><img src="images/814-1.png" alt="images/814-1.png" /></a><br />&quot;&quot;&quot;<br />www-data@obscure:/home/robert$ cat check.txt<br />Encrypting this file with your key should result in out.txt, make sure your key is correct!<br /><br />www-data@obscure:/home/robert$ cat out.txt<br />¦ÚÈêÚÞØÛÝÝ      ×ÐÊß<br />ÞÊÚÉæßÝËÚÛÚêÙÉëéÑÒÝÍÐ<br />êÆáÙÞãÒÑÐáÙ¦ÕæØãÊÎÍßÚêÆÝáäè     ÎÍÚÎëÑÓäáÛÌ×<br /><br />www-data@obscure:/home/robert$ cat passwordreminder.txt<br />´ÑÈÌÉàÙÁÑé¯·¿kwww-data@obscure:/home/robert$<br /><br />www-data@obscure:/home/robert$ cat SuperSecureCrypt.py<br />&quot;&quot;&quot;<br />#python3 SuperSecureCrypt.py -i out.txt -o /tmp/key.txt -k &quot;$(cat check.txt)&quot; -d<br />&quot;&quot;&quot;<br />www-data@obscure:/home/robert$ cat /tmp/key.txt<br />alexandrovichalexandrovichalexandrovichalexandrovichalexandrovichalexandrovichalexandrovichai<br />&quot;&quot;&quot;<br />#python3 SuperSecureCrypt.py -i passwordreminder.txt -o /tmp/passwd.txt -k alexandrovich -d<br />&quot;&quot;&quot;<br />cat /tmp/passwd.txt<br />SecThruObsFTW<br />&quot;&quot;&quot;<br />#ssh robert@10.10.10.168<br />User.txt<br /><br /><br />sudo -l<br />/usr/bin/python3 /home/robert/BetterSSH/BetterSSH.py<br /><br />mkdir /tmp/SSH<br />run the command<br />look in /tmp/SSH<br />its a hash for root, decrypt it and su root<br />rooted.<br /></div></body></html>

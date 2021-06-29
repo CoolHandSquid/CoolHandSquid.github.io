@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>msf portfwd</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>msf portfwd</h1><br/>#to utilize second nic<br />route<br />portfwd add -L 127.0.0.1 -l 3232 -r 192.168.1.2<br /><br />#to expose local port on a target<br />portfwd add -L 127.0.0.1 -l 4450 -r 127.0.0.1 -p 445<br />portfwd add -L 127.0.0.1 -l 1350 -r 127.0.0.1 -p 135<br />nmap -p 1350,4450 -sv -sT -Pn -n --open 127.0.0.1</div></body></html>

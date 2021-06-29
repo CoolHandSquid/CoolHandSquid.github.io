@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>71 Alpha</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>71 Alpha</h1><br/>nmap showed  ssh and 80<br />nikto showed that a certain page was vulnerable to shellshock<br />cracked open burp, replaced the useragent with shellshock, started listener, boom!! www-data shell!!<br />/etc/passwd showed me the user gibson<br />from /var       grep -C2  -r root 2&gt; /dev/null | grep pass   and we got some stuff!!<br />zaq1xsw2cde3        now lets try it<br />su -l root .... no dice<br />su -l gibson ... yee!! we are now gibson<br />sudo -l shows us we can do it all<br />sudo -l /bin/bash -i<br />whoami<br />rooted</div></body></html>

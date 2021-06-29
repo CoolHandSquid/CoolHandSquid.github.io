@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.11.1.217 Hotline rooted</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.11.1.217 Hotline rooted</h1><br/>Nmap showed that an assload of ports were open.<br />80 and 443 both led me to Elastix, which I worked on before duting HTB Beep.<br />at the login page for Elastix I used the default login admin:admin... we are in!!<br />I was able to verify that the version was 2.2.0.<br />searchsploit showed me that there was a remote code execution exploit (which I now know you could (maybe) acutlly get without logging in).<br /><a href=""><img src="images/1076-1.png" alt="images/1076-1.png" /></a><br /><br />I was not able to get the 18650.py exploit to send due to some ssl error, so I had it just print the url it was going to navigate to (already URL encoded, with my ip , lport, and extension to call).<br /><a href=""><img src="images/1076-2.png" alt="images/1076-2.png" /></a><br /><br />throw that in burp, send it, and catch it in nc<br /><a href=""><img src="images/1076-3.png" alt="images/1076-3.png" /></a><br /><a href=""><img src="images/1076-4.png" alt="images/1076-4.png" /></a><br /><br />sudo nmap --interactive<br />!sh<br />rooted!<br /><br />Note, this exploit is dependent upon extension 1000 existing. it is the default test extension, so there is a good chance, but you may have to add an extension and point to that instead.<br /><br /><br /><br />ffb5d84a211ae8398d6ae474f2242af3</div></body></html>

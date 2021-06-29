@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Kerberos Userlist</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Kerberos Userlist</h1><br/>root@kali:~/Desktop/Machines/HTB/Resolute# nmap -p 88 --script=krb5-enum-users --script-args krb5-enum-users.realm=&#39;megabank.local&#39;,userdb=/usr/share/seclists/Usernames/Names/names.txt 10.10.10.169<br />Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2019-12-17 11:30 EST<br />Nmap scan report for resolute.htb (10.10.10.169)<br />Host is up (0.092s latency).<br /><br />PORT   STATE SERVICE<br />88/tcp open  kerberos-sec<br />| krb5-enum-users: <br />| Discovered Kerberos principals<br />|     simon@megabank.local<br />|     zach@megabank.local<br />|     gustavo@megabank.local<br />|     claude@megabank.local<br />|     per@megabank.local<br />|     felicia@megabank.local<br />|     claire@megabank.local<br />|     fred@megabank.local<br />|     annette@megabank.local<br />|     stevie@megabank.local<br />|     angela@megabank.local<br />|     ulf@megabank.local<br />|     marcus@megabank.local<br />|     abigail@megabank.local<br />|     sally@megabank.local<br />|     annika@megabank.local<br />|     marko@megabank.local<br />|     melanie@megabank.local<br />|     paulo@megabank.local<br />|     ryan@megabank.local<br />|_    steve@megabank.local<br /></div></body></html>

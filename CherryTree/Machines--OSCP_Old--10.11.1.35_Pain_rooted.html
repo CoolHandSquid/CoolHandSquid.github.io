@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.11.1.35 Pain rooted</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.11.1.35 Pain rooted</h1><br/>An nmap scan showed that only port 22 and 80 were open.<br />After navigating to the website Chris noticed that if you hovered over the links you could see there was a php call happening on /section.php?page=xxxxx.<br />When he replaced the non-existing file (xxxxx) with /etc/passwd he was able to dump /etc/passwd to screen.<br />He then hosted a simple php script echoing “Hello World” to the screen which he was able to reach and have executed via the target.<br />Becasue he was not able to get a stable php reverse shell he wrote a php script to upload and execute a python reverse shell script which was successful and got him a reverse shell as apache.<br />During enumeration he saw that the SUID bit for cp was set to run as root.<br />On Chris&#39;s local machine using openssl he created a line with his own creds for root to replace the one that was currently there.<br />Once he echoed that line into a .txt file on the target he copied that file over the real /etc/passwd.<br />He then was able to su to root.<br /><br /><br />99d8f4f10cf80eed5cb67e73e8b60a3d</div></body></html>

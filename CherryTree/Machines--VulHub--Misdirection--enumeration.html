@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>enumeration</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>enumeration</h1><br/>nmap -sC -sV -p- -oN Misdirection.txt 192.168.11.137                                                                  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br /><br />python3 /root/Desktop/Tools/dirsearch/dirsearch.py -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -e php -f -t 20 -u <a href="http://192.168.11.137:80">http://192.168.11.137:80</a><br /><br />python3 /root/Desktop/Tools/dirsearch/dirsearch.py -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -e php -f -t 20 -u <a href="http://192.168.11.137:8080">http://192.168.11.137:8080</a><br /><br />nikto -host <a href="http://192.168.11.137:80">http://192.168.11.137:80</a><br /><br />nikto -host <a href="http://192.168.11.137:8080">http://192.168.11.137:8080</a><br /><br />wpscan --url <a href="http://10.10.10.37">http://</a>192.168.11.137:80 --enumerate u,ap,tt,t --passwords /root/Desktop/Tools/Wordlists/rockyou.txt -e | tee WPScanBruteForce.txt<br /><br />:8080/debug/<br /><a href="https://www.hackingarticles.in/misdirection-1-vulnhub-walkthrough/">https://www.hackingarticles.in/misdirection-1-vulnhub-walkthrough/</a></div></body></html>

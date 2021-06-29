@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>smb nmap</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>smb nmap</h1><br/>squid@CoolHandKali:/Yeet/Machines/HTB/Nest$ nmap --script smb-vuln* -Pn -p 139,445 10.10.10.178 <br />Starting Nmap 7.80 ( https://nmap.org ) at 2020-04-20 10:54 EDT<br />Nmap scan report for 10.10.10.178<br />Host is up (0.12s latency).<br /><br />PORT    STATE    SERVICE<br />139/tcp filtered netbios-ssn<br />445/tcp open     microsoft-ds<br /><br />Host script results:<br />|_smb-vuln-ms10-054: false<br />|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR<br /><br />Nmap done: 1 IP address (1 host up) scanned in 13.99 seconds<br /></div></body></html>

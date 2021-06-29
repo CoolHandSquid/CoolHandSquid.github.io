@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>awk/sed</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>awk/sed</h1><br/>awk &#39;{print $1, $2, $3}&#39; shellcode.txt                                                                                   to print field 1, 2, and 3<br />awk &#39;{print $3}&#39; shellcode.txt | while read line; do echo $line; done                                        to loop through each line of field 3<br />awk &#39;{print $3}&#39; shellcode.txt | while IFS=b read junk line; do echo $line; done &gt; 3.txt        to remove all charachters before and including “b” in field 3 then writing to 3.txt<br />awk ‘{print “buf += ”$1}’ 3.txt &gt; finalshellcode.txt                                                             to print the string “buf += ” then the field of 3.txt and write into finalshellcode.txt<br /><br /><br /><br /><br /><br /><br />cat oracle-betterdefaultpasslist.txt | sed &#39;s/.*://&#39; &gt; passwords.txt<br />                                                             ^<br />s means regex, / opens, .* anything including nothing,: is the deliminating charachter, // is close. <br />This will remove charchters before the :                                                <br />                     <br />                     sed &#39;s/:.*//&#39;      will remove charachters after the : <br />                     <br /><br /><br />sed -z &#39;s/\n//g&#39;<br />removes line brakes and turns code all into one line</div></body></html>

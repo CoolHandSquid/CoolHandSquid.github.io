@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Eval01</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Eval01</h1><br/>&gt;T1: 10.50.20.193, 10.20.169.33   EXT_RTR     Linux       SSH in. Vet. Redir To T2.<br />    -&gt;T2: 10.20.169.121     WEBSERVER       Linux       SSH in. Vet. Scan. Redir T3.                &lt;&lt;Skipped<br />        --&gt;T3: 10.20.169.238                                  SSH in. Vet. Scan. Conclude Operation.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />ssh -M -S /tmp/t1 -p 10123 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null engineer14@10.50.20.193 -L10200:10.20.169.121:52203<br />engineer14      enshallah<br />ssh -S /tmp/t1 dummy@127.0.0.1 -O forward -D127.0.0.1:9050<br />ssh -S /tmp/t1 dummy@127.0.0.1 -O cancel -D127.0.0.1:9050<br />ssh -S /tmp/t1 dummy@127.0.0.1 -O forward -L10300:10.20.269.238:52230<br /><br />ssh -M -S /tmp/t2 -p 10200 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null caisson14@127.0.0.1 -D127.0.0.1:9050<br />caisson14   tread_depth<br />ssh -S /tmp/t2 dummy@127.0.0.1 -O cancel -D127.0.0.1:9050<br />ssh -S /tmp/t2 dummy@127.0.0.1 -O forward -L10300::52230<br /><br /><br />ssh -M -S /tmp/t3 -p  10300 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null NOC_Admin14@127.0.0.1 <br />NOC_Admin#::5gftE8DCc8<br />ssh -S /tmp/t3 dummy@127.0.0.1 -O forward -D127.0.0.1:9050<br />ssh -S /tmp/t3 dummy@127.0.0.1 -O cancel -D127.0.0.1:9050</div></body></html>

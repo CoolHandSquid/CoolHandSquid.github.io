@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Linux SA</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Linux SA</h1><br/>date<br />ps -ef | grep $$        (determine current process)<br />whcih bash              (determine type of shell)<br />echo $PATH             (determine path)<br /><br />#Danger Checks<br />getenforce || sestatus          (determines status of SELinux)<br />ps -ef | grep -i audit[d]         (determins audit logging)<br />auditctl -l                             (determines logon time logging)<br />/var/log/pacct or /var/log/account/pacct    (these files log process&#39;s that are started on the system)<br />#unset HISTFILE HISTSIZE HISTFILESIZE<br /><br />#Traditional SA<br />w               (who else is logged in)<br />id<br />whoami<br />groups<br />hostname<br />ip addr sho (ifconfig -a)<br />ps -ef<br />netstat -napot<br />cat /etc/*{release,issue,edition,version}* 2&gt; /dev/null<br />mount    (check mount points) <br />df          (check mount points easier)<br /></div></body></html>

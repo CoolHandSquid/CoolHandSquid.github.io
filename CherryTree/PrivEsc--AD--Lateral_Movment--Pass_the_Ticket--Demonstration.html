@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Demonstration</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Demonstration</h1><br/>This was run from Bossman (Windows 10) under the context of Squid (domain user) in a non-elevated command prompt.<br /><a href=""><img src="images/1832-1.png" alt="images/1832-1.png" /></a><br /><a href=""><img src="images/1832-2.png" alt="images/1832-2.png" /></a><br />From previous enumeration we determined that the owner of the IIS server is yee\tripp:Passw0rd. We are going to need to get the hash for that password.<br />A87F3A337D73085C45F9416BE5787D86<br /><a href=""><img src="images/1832-3.png" alt="images/1832-3.png" /></a><br /><br />The ticket is now running in memory. Becasue application request and service authentication (kerberos steps 5 and 6) do not involve the KDC, authentication to an application as an admin can be done! This is most commonly used against Microsoft SQL servers and can result in RCE.</div></body></html>

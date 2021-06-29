@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>nmap</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>nmap</h1><br/>nmap -sC -sV -p- -oN Nmap.txt 10.10.10.29                                                                   &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br /><br />nmap -p 445 --script &quot;safe&quot; -Pn -n -oN Blue_Safe.txt 10.10.10.40<br /><br />nmap -sV -T4 -p- -oN Mirai.nmap2 10.10.10.48 <br /><br /><code>nmap -v -sV -p- --script vuln -T4 10.10.10.48</code>                                               &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br /><br />nmap --script smb-vuln* -p 139,445 10.10.10.40<br /><br />nmap -Pn -sV -p 995 -vv --script=ssl* 10.11.1.22</div></body></html>

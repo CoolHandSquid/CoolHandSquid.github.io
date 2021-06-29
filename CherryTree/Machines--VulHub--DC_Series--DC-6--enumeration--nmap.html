@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>nmap</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>nmap</h1><br/>root@kali:~/Desktop/Machines/VulnHub/DC-6# nmap -sC -sV -p- -oN DC-6.txt 192.168.11.133<br />Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2019-10-09 13:04 EDT<br />Nmap scan report for 192.168.11.133<br />Host is up (0.00037s latency).<br />Not shown: 65533 closed ports<br />PORT   STATE SERVICE VERSION<br />22/tcp open  ssh     OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)<br />| ssh-hostkey: <br />|   2048 3e:52:ce:ce:01:b6:94:eb:7b:03:7d:be:08:7f:5f:fd (RSA)<br />|   256 3c:83:65:71:dd:73:d7:23:f8:83:0d:e3:46:bc:b5:6f (ECDSA)<br />|_  256 41:89:9e:85:ae:30:5b:e0:8f:a4:68:71:06:b4:15:ee (ED25519)<br />80/tcp open  http    Apache httpd 2.4.25 ((Debian))<br />|_http-server-header: Apache/2.4.25 (Debian)<br />|_http-title: Did not follow redirect to <a href="http://wordy/">http://wordy/</a><br />MAC Address: 00:0C:29:F7:01:34 (VMware)<br />Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br /><br />Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br />Nmap done: 1 IP address (1 host up) scanned in 10.86 seconds<br /></div></body></html>

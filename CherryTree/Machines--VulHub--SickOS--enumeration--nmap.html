@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>nmap</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>nmap</h1><br/>root@kali:~# nmap -sC -sV -p- -oN Nmap.txt 192.168.11.250   <br />Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2019-10-16 17:51 EDT<br />Nmap scan report for 192.168.11.250<br />Host is up (0.00039s latency).<br />Not shown: 65533 filtered ports<br />PORT   STATE SERVICE VERSION<br />22/tcp open  ssh     OpenSSH 5.9p1 Debian 5ubuntu1.8 (Ubuntu Linux; protocol 2.0)<br />| ssh-hostkey: <br />|   1024 66:8c:c0:f2:85:7c:6c:c0:f6:ab:7d:48:04:81:c2:d4 (DSA)<br />|   2048 ba:86:f5:ee:cc:83:df:a6:3f:fd:c1:34:bb:7e:62:ab (RSA)<br />|_  256 a1:6c:fa:18:da:57:1d:33:2c:52:e4:ec:97:e2:9e:af (ECDSA)<br />80/tcp open  http    lighttpd 1.4.28<br />|_http-server-header: lighttpd/1.4.28<br />|_http-title: Site doesn&#39;t have a title (text/html).<br />MAC Address: 00:0C:29:FC:64:BB (VMware)<br />Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br /><br />Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br />Nmap done: 1 IP address (1 host up) scanned in 110.87 seconds<br /></div></body></html>

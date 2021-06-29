@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>python mysql</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>python mysql</h1><br/>/opt/app # cat fme.py <br />#!/usr/bin/env python<br /><br />import pymysql<br />from craft_api import settings<br /><br /># test connection to mysql database<br /><br />connection = pymysql.connect(host=settings.MYSQL_DATABASE_HOST,<br />                             user=settings.MYSQL_DATABASE_USER,<br />                             password=settings.MYSQL_DATABASE_PASSWORD,<br />                             db=settings.MYSQL_DATABASE_DB,<br />                             cursorclass=pymysql.cursors.DictCursor)<br /><br />try: <br />    with connection.cursor() as cursor:<br />#        sql = &quot;SELECT `id`, `username`, `password` FROM `user` LIMIT 100&quot;<br />        sql = &quot;SELECT * FROM `user` LIMIT 1000000&quot;<br />        cursor.execute(sql)<br />        result = cursor.fetchall()<br />        print(result)<br />#        print(user)<br />#        print(password)<br /><br />finally:<br />    connection.close()/opt/app # <br /></div></body></html>

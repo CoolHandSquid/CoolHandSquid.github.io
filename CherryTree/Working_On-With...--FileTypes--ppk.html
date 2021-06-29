@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>ppk</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>ppk</h1><br/><br />A .ppk file is a putty ssh private key <br /><br />puttyzip2john alice.ppk         to get the password for it if there is one<br /><br />apt install putty-tools <br />puttygen alice.ppk -O private-openssh -o alice.pem                  private-openssh-new may be helpful aswell<br />chmod 600 alice.pem <br />ssh alice@10.10.10.7 -i alice.pem</div></body></html>

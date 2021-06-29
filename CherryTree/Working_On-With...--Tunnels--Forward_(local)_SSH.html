@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Forward (local) SSH</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Forward (local) SSH</h1><br/>#Connect the target internal port 2222 to kali via 127.0.0.1:1111<br />ssh -p 22 bryan@192.168.1.2 -L 127.0.0.1:1111:127.0.0.1:2222<br /><a href=""><img src="images/1575-1.png" alt="images/1575-1.png" /></a><br /><br />#Connect the remote box 192.168.23.169 port 22 via an ssh connection to 192.168.20.117. <br />ssh -p 22 root@192.168.20.117 -L 127.0.0.1:1111:192.168.23.169:22<br /><a href=""><img src="images/1575-2.png" alt="images/1575-2.png" /></a><br /><br />#Jump from 192.168.20.117 to 192.168.21.122 to 192.168.23.169 and ssh in via kali 127.0.0.1:1111.<br />ssh -p 22 root@192.168.20.117 -L 127.0.0.1:1111:192.168.21.122:22<br />ssh -p 1111 squid@127.0.0.1 -L 127.0.0.1:2222:192.168.23.169:22<br />ssh -p 2222 bryan@127.0.0.1<br />                                           <br /><a href=""><img src="images/1575-3.png" alt="images/1575-3.png" /></a><br /><br />#Jump from 192.168.21.122 to 192.168.23.169 to 192.168.20.117 and ssh in via kali.<br />ssh -J squid@192.168.21.122:22,bryan@192.168.23.169 root@192.168.20.117<br /><a href=""><img src="images/1575-4.png" alt="images/1575-4.png" /></a><br /><br /></div></body></html>

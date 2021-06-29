@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>nmap kerberos</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>nmap kerberos</h1><br/>root@kali:~/Desktop/Machines/OSCP/220# nmap -p 88 --script=krb5-enum-users --script-args krb5-enum-users.realm=&#39;thinc.local&#39;,userdb=/usr/share/seclists/Usernames/Names/names.txt 10.11.1.220<br />Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2019-12-04 17:50 EST<br />Nmap scan report for master.thinc.local (10.11.1.220)<br />Host is up (0.045s latency).<br /><br />PORT   STATE SERVICE<br />88/tcp open  kerberos-sec<br />| krb5-enum-users: <br />| Discovered Kerberos principals<br />|     robert@thinc.local<br />|_    kevin@thinc.local<br />MAC Address: 00:50:56:93:7C:86 (VMware)<br /><br />Nmap done: 1 IP address (1 host up) scanned in 91.61 seconds<br />root@kali:~/Desktop/Machines/OSCP/220# <br /></div></body></html>

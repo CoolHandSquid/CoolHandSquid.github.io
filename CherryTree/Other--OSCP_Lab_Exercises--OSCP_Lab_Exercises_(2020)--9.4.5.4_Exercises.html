@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>9.4.5.4 Exercises</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>9.4.5.4 Exercises</h1><br/>☐ Interact with the MariaDB database and manually execute the commands required to authenticate to the application. Understand the vulnerability.<br /><a href=""><img src="images/1248-1.png" alt="images/1248-1.png" /></a><br />☐ SQL inject the username field to bypass the login process.<br /><a href=""><img src="images/1248-2.png" alt="images/1248-2.png" /></a><br />☐ Why is the username displayed like it is in the web application once the authentication process is bypassed?<br />The username field is not a name pulled from a databse, instead is literally the name given in the field, which in this case results to True before getting to the password field.<br />☐ Execute the SQL injection in the password field. Is the “LIMIT 1” necessary in the payload? Why or why not?<br />The “Limit 1” field is necessary becasue the query wants to return more than one row, which would not allow us to login. </div></body></html>

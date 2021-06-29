@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>File Recovery</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>File Recovery</h1><br/>lsblk to see all drives/devices<br />cd into drive/device that file has been lost<br /><br />mount       to see where the data is stored<br />root@raspberrypi:/media/usbstick# mount<br />/dev/sdb on /media/usbstick type ext4 (ro,nosuid,nodev,noexec,relatime,data=ordered)<br /><br />strings         to see strings of data in the hex<br />root@raspberrypi:/media/usbstick# strings /dev/sdb<br />3d3e483143ff12ec505d026fa13e020b<br />Damnit! Sorry man I accidentally deleted your files off the USB stick.<br /><br />xxd /dev/sdb   to see in pure hex<br />grep -a ‘[a-z0-9]\{32\}’ /dev/sdb          will grep the hex values for lowercase letter or number, 32 in a row. (isnt regex fun?)<br /><br /><br /><br />for more wild File Recovery tools and techniques check out this ippsec video after the 10 minute mark<br /><a href="https://www.youtube.com/watch?v=SRmvRGUuuno&t=633s">https://www.youtube.com/watch?v=SRmvRGUuuno&amp;t=633s</a><br /><br /><br /></div></body></html>

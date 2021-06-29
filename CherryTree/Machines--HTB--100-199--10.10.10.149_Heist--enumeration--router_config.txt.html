@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>router config.txt</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>router config.txt</h1><br/>version 12.2<br />no service pad<br />service password-encryption<br />!<br />isdn switch-type basic-5ess<br />!<br />hostname ios-1<br />!<br />security passwords min-length 12<br />enable secret 5 $1$pdQG$o8nrSzsGXeaduXrjlvKc91<br />!<br />username rout3r password 7 0242114B0E143F015F5D1E161713<br />username admin privilege 15 password 7 02375012182C1A1D751618034F36415408<br />!<br />!<br />ip ssh authentication-retries 5<br />ip ssh version 2<br />!<br />!<br />router bgp 100<br /> synchronization<br /> bgp log-neighbor-changes<br /> bgp dampening<br /> network 192.168.0.0Â mask 300.255.255.0<br /> timers bgp 3 9<br /> redistribute connected<br />!<br />ip classless<br />ip route 0.0.0.0 0.0.0.0 192.168.0.1<br />!<br />!<br />access-list 101 permit ip any any<br />dialer-list 1 protocol ip list 101<br />!<br />no ip http server<br />no ip http secure-server<br />!<br />line vty 0 4<br /> session-timeout 600<br /> authorization exec SSH<br /> transport input ssh<br /><br /></div></body></html>

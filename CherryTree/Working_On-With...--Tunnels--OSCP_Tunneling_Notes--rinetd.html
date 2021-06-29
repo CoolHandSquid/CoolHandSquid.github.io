@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>rinetd</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>rinetd</h1><br/>       internet<br />       <br />       computer that can reach both internet and hidden (middle guy)<br />       <br />       hidden<br /><br /><br />on middle guy<br />    bindaddress always equals 0.0.0.0 (so it can be connected to by any machine)<br />    bindport is the port that “hidden” will be connecting to middle guy on<br />    connectaddress is the ip that hidden will be forwarded to<br />    connectport is the port that hidden will be forwarded to<br />    <br />    service rinetd restart<br /><a href=""><img src="images/1131-1.png" alt="images/1131-1.png" /></a><br /><br />hidden<br />    nc -nvv “middle guy ip” “middle guy connectport”<br />    <a href=""><img src="images/1131-2.png" alt="images/1131-2.png" /></a></div></body></html>

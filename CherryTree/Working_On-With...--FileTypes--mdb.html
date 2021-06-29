@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>mdb</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>mdb</h1><br/>can be read with excel (less than optimal)<br />can be read with klexi<br />ippsec reccomends mdbtools      (apt install mdbtools)      mdb-sql mdbtables<br /><br />run strings to quickly look for potential username/passwords<br />strings -n 8 file.mdb | sort -u &gt; words.txt<br /><br /><br />ippsec sermon<br />mkdir tables<br />for i in $(mdb-tables file.mdb); do mdb-export file.mdb $i &gt; tables/$i; done        this will make a directory full of contets for each table locally.<br />cd tables<br />wc -l | sort -n             shows you what tables have data and which are 1 line (empty)<br />cat dirs that are most juicy</div></body></html>

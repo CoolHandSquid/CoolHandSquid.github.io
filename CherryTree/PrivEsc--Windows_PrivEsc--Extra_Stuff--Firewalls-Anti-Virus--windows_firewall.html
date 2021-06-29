@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>windows firewall</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>windows firewall</h1><br/>allow inbound connection on port 3232 via powershell<br />    New-NetFirewallRule -DisplayName &#39;nc remote connect&#39; -profile Any -Direction Inbound -Action allow -Protocol TCP -localport 3232<br /></div></body></html>

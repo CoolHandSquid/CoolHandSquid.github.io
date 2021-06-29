@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Fun psexec nugget</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Fun psexec nugget</h1><br/>When you spawn a session with psexec.exe (sysinternals tool), that session will run in a medium integrity context. Therefore even if the user has the privilege to write to the ADMIN$ drive of another machine, the token of the proccess the user is running in will not allow it.<br />Psexec.py (Impacket tool) spawns it&#39;s process&#39;s as system (that is becasue it writes to any share it can access, creates a service pointing to the .exe in the share it can write to then executes that service whcih defaults to being run as system). Althought the token is fine, if you would attempt to use psxec.exe (sysinternals tool) from that psexec.py session it would not fail but instead hang. Why? Becasue psexec.py communicates back via a TCP port where as psexec.exe communicates via named pipes and there is some kind of misshap with the stdin,out,err relationship. <br /></div></body></html>

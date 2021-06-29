@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>sahres</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>sahres</h1><br/>root@kali:~/Desktop/Machines/HTB/Forest# nmap --script smb-enum-shares -p 139,445 10.10.10.161<br />Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2019-10-30 12:54 EDT<br />Nmap scan report for 10.10.10.161<br />Host is up (0.094s latency).<br /><br />PORT    STATE SERVICE<br />139/tcp open  netbios-ssn<br />445/tcp open  microsoft-ds<br /><br />Host script results:<br />| smb-enum-shares: <br />|   note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br />|   account_used: &lt;blank&gt;<br />|   \\10.10.10.161\ADMIN$: <br />|     warning: Couldn&#39;t get details for share: NT_STATUS_ACCESS_DENIED<br />|     Anonymous access: &lt;none&gt;<br />|   \\10.10.10.161\C$: <br />|     warning: Couldn&#39;t get details for share: NT_STATUS_ACCESS_DENIED<br />|     Anonymous access: &lt;none&gt;<br />|   \\10.10.10.161\IPC$: <br />|     warning: Couldn&#39;t get details for share: NT_STATUS_ACCESS_DENIED<br />|     Anonymous access: READ<br />|   \\10.10.10.161\NETLOGON: <br />|     warning: Couldn&#39;t get details for share: NT_STATUS_ACCESS_DENIED<br />|_    Anonymous access: &lt;none&gt;<br /><br />Nmap done: 1 IP address (1 host up) scanned in 233.61 seconds<br />root@kali:~/Desktop/Machines/HTB/Forest# <br /></div></body></html>

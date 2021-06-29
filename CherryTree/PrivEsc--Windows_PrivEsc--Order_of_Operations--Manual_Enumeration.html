@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Manual Enumeration</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Manual Enumeration</h1><br/>System Enumeration<br />systeminfo<br />wmic qfe get Caption,Description,HotFixID,InstalledOn<br />wmic logicaldisk get caption,description,providername<br /><br />User Enumeration<br />whoami<br />whoami /priv<br />whoami /groups<br />net user<br />net user someguy<br />net user administrator<br />net localgroup<br />net localgroup administrators<br /><br />Network Enumeration<br />ipconfig /all<br />arp -a<br />route print<br />netstat -ano<br /><br />AV and Firewall<br />sc query windefend<br />sc queryex type=service<br />netsh advfirewall firewall dump<br />netsh firewall show state<br />netsh firewall show config<br /><br />Others<br />PS&gt; Get-ScheduledTask | where {$_.TaskPath -notlike &quot;\Microsoft*&quot;} | ft TaskName,TaskPath,State<br />&gt; tasklist /V<br />&gt; icacls.exe &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup&quot;</div></body></html>

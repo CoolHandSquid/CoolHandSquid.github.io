@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>RDP</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>RDP</h1><br/>expose internal port:<br />	netsh interface portproxy add v4tov4 listenaddress=172.16.2.2 listenport=3389 connectaddress=127.0.0.1 connectport=80<br />enable rdp<br />	enable-psremoting<br />	reg add &quot;hklm\system\currentcontrolset\control\terminal server\fdenytsconnections&quot; /v 0<br />	shutdown /r /t 00 /f<br />xfreerdp /u:&quot;administrator&quot; /v:my.server.net:61220</div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>DC Sync</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>DC Sync</h1><br/>In a domain with mutliple domain controllers, there are constant queries via the IDL_DRSGetNCChanges API to keep all of th domain controllers on the same page and updated. When this API is used to query an account, the machine does not need to be verified to be a DC, only the SID needs to have the appropriate privileges. In short, a domain admin will be able to query the DC directly, aquiring the NTLM hash of user on the domain. </div></body></html>

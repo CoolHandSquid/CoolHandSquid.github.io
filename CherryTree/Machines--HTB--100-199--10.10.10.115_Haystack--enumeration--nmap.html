@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>nmap</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>nmap</h1><br/>root@kali:~/Desktop/Machines/HTB/Haystack# nmap -sC -sV -p- 10.10.10.115<br />Starting Nmap 7.70 ( https://nmap.org ) at 2019-10-24 12:46 EDT<br />Nmap scan report for 10.10.10.115<br />Host is up (0.10s latency).<br />Not shown: 65532 filtered ports<br />PORT     STATE SERVICE VERSION<br />22/tcp   open  ssh     OpenSSH 7.4 (protocol 2.0)<br />| ssh-hostkey: <br />|   2048 2a:8d:e2:92:8b:14:b6:3f:e4:2f:3a:47:43:23:8b:2b (RSA)<br />|   256 e7:5a:3a:97:8e:8e:72:87:69:a3:0d:d1:00:bc:1f:09 (ECDSA)<br />|_  256 01:d2:59:b2:66:0a:97:49:20:5f:1c:84:eb:81:ed:95 (ED25519)<br />80/tcp   open  http    nginx 1.12.2<br />|_http-server-header: nginx/1.12.2<br />|_http-title: Site doesn&#39;t have a title (text/html).<br />9200/tcp open  http    nginx 1.12.2<br />| http-methods: <br />|_  Potentially risky methods: DELETE<br />|_http-server-header: nginx/1.12.2<br />|_http-title: Site doesn&#39;t have a title (application/json; charset=UTF-8).<br /><br />Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br />Nmap done: 1 IP address (1 host up) scanned in 433.20 seconds<br /></div></body></html>

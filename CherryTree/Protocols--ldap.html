@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>ldap</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>ldap</h1><br/>nmap -p 389 --script ldap-search -Pn 10.10.10.107<br /><br />ldapsearch -h 10.10.10.161 -x<br /><br />ldapsearch -h 10.10.10.161 -x -s base namingcontexts       &lt;this should dump domain name   ex DC=htb,DC=local !!!!!!!!!!!!!!!!!!!!!!THERE IS NO E IN NAM!!!!!!!!!!!!!!!!!!!!!!!<br /><br />ldapsearch -h 10.10.10.161 -x -b “DC=htb,DC=local”          &lt;dumps assload of queryable ldap stuff <br /><br />ldapsearch -h 10.10.10.161 -x -b “DC=htb,DC=local” ‘(objectClass=Person)’ sAMAccountName &lt;example of ldap query<br />                                                                                 ^^query                       ^Filter<br /><br />-D ‘squid@htb.local’ -w ‘YeeYeeYee’     &lt;syntax to add credentials<br /><br />ldapsearch -x -h sizzle.htb.local -D ‘amanda@htb.local’ -w ‘Ashare1972’ -b ‘dc=htb,dc=local’ “(&amp;(objectClass=user)(memberof=CN=Domain Admins,CN=Users,DC=htb,DC=local))”<br />^^grep that for sAMAccountName to get just domain admins<br /><br /><br /><br /><br />ypuffy --do machine<br />sizzle  --watch video done<br />if FQDN=ypuffy.hackthebox.htb<br />    base=&#39;DC=hackthebox,DC=htb&#39;</div></body></html>

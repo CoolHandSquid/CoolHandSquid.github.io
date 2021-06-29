@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Kerberos Funciton Summarized</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Kerberos Funciton Summarized</h1><br/>Part 1- Login<br />1. Client Sends KDC a AS_REQ that has the time stamp encrypted with the users hash.<br />2. If the AS_REQ passes the checks, an AS_RES is sent to the client containing a Session Key and a TGT.<br />Part 2- Resource Access<br />3. The client sends a TGS_REQ to the KDC containing the desired SPN and the clients encrypted TGT.<br />4. If the TGS_REQ passes the checks, a TGS_REP is sent to the client containing a session key for that new session, a Service Ticket, and the desired SPN.<br />5. The client sends the application server an AP_REQ containing the username/timestamp encrypted with the Session Key, the Session Key, and the Service Ticket.<br />6. If the AP_REQ passes the checks, the client is permitted access to the service.</div></body></html>

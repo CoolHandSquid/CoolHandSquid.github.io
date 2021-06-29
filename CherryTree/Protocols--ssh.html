@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>ssh</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>ssh</h1><br/>Authentication techniques-<br />	password<br />	private key of target<br />	Your public key written to /home/tony/.ssh/authorized_keys <br />	CA and CA.pub (signed private key with a “public key cert” and “public key” in the same dir.)<br /><br /><br />have you&gt;&gt;&gt;???...<br />used leaked data to find machine version, patch level and patch date<br />used hydra to brute force<br />used cewl to create a brute force password/user list?<br /><br />??are you in a users dir??<br />mkdir .ssh<br />    --on kali-- <br />        ssh-keygen<br />        enter, enter, enter<br />        cd .ssh<br />        cp id_rsa.pub authorized_keys<br />cd .ssh<br />put authorized_keys<br />!!!now you can ssh as the user who&#39;s directory you were in!!!<br /><br />-----------------------------------------------------------------------------------------------------------------------------------<br />ssh proxy<br />ssh -L 5601:127.0.0.1:5601 security@10.10.10.115<br /><br />-----------------------------------------------------------------------------------------------------------------------------------<br />ssh -i /root/path/id_rsa gilfoyle@10.10.10.110        &lt;&lt;&lt;&lt;login with private key<br /><br /></div></body></html>

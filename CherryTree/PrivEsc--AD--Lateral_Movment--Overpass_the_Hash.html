@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Overpass the Hash</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Overpass the Hash</h1><br/>Overpass the Hash is similar to Pass the Hash as they both utilize a compromised NTLM hash, but in Overpass the Hash we will take that compromised NTLM hash and turn it into a TGT (or TGS). If our created TGT is that of a domain admin, it will give us the ability to send a TGS_REQ to the KDC that will return a TGS_RES containing a TGS that will allow us to authenticate to servers as that user. </div></body></html>

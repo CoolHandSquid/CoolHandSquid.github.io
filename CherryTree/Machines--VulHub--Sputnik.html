@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Sputnik</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Sputnik</h1><br/>nmap showed that 8089,8189,55555,61337 were all open and http<br />61337 was running splunk (no dice until creds)<br />8089 and 8189 were duds (no nikto responce) probably ingest ports for splunk<br />55555 was a .git project flappy (flappybird)<br />In the .git Head I was able to find the repo and I downloaded it.<br />in the repo I did the log and stuff and was able to find the creds sputnik:ameer_says_thank_you_and_good_job<br />I was able to log into splunk with this!!!<br />Now I went to <a href="https://www.n00py.io/2018/10/popping-shells-on-splunk/">https://www.n00py.io/2018/10/popping-shells-on-splunk/</a> <br />USE NETCAT TO HANDLE THE SHELL<br />from here I used the ??shell super fucked?? line and was able to get a better shell<br />sudo -l showed that I could run ed as root<br />gtfo bins... and BOOM<br />root!!!!!!</div></body></html>

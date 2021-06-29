@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Scheduled Tasks</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Scheduled Tasks</h1><br/>Schtasks are normally run as the user who created it, but administrators can make tasks that run as other users or even system. I don&#39;t know of a good way to enumerate this. Paging through the non-microsoft ones might get you there.<br /><br />PS&gt; Get-ScheduledTask | where {$_.TaskPath -notlike &quot;\Microsoft*&quot;} | ft TaskName,TaskPath,State<br />&gt; .\accesschk.exe /accepteula -quvw MyUsername C:\file.ps1<br /><br />If you can edit the file, overwrite it or append to it and win the war.</div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>DC-4</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>DC-4</h1><br/>nmap -sC -sV -p- 192.168.11.129 -oN DC-4.txt        and saw only port 80 open<br />dirb and nikto gave me minimal help<br />looked at page source to see how to format wfuzz command<br />ran wfuzz with big.txt and admin and was able to find the admin password “happy”<br />was able to run limited commands through webpage<br />caught in burp and found that I could run my own commands!<br />went to pentestmonkey and got the python one liner, to run<br />cought with nc -nlvp 3232!<br />as www-data I was able to look in the other users profiles<br />found old-passwords.bak under jims backups<br />copied the file from screen and put in a text document<br />ran with hydra against the known user accounts<br />found the jim password jibril04<br />logged in with ssh!<br />find / -perm 4000       and saw that jim had new mail<br />I read the email and got charles&#39; password ^xHhA&amp;hvim0y<br />ssh&#39;d into charles!<br />sudo -l              and saw that we could teehee<br />sudo teehee -a /etc/sudoers<br />charles    ALL=(ALL:ALL) ALL<br />log out/log in<br />sudo /bin/bash<br />found final flag.txt!</div></body></html>

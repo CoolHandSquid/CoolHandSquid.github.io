@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>NTLM Function</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>NTLM Function</h1><br/><a href=""><img src="images/1163-1.png" alt="images/1163-1.png" /></a><br /><br />1. From the users password the client caculates the NTLM hash. <br />2. The client sends its username to the application server it wants to authenticate to.<br />3. The application server sends a nonce to the client (Challenge).<br />4. The client sends back the nonce encrypted with its NTLM hash (Responce).<br />5. The application server sends the “Responce,” recieved from the client, username, and nonce to the Domain controler.<br />6. The domain controller, already having the NTLM hash for each username, encryptes the nonce with the NTLM hash of the assosiated username and compares that with the one recieved from the application server.<br />7. If the encrypted nonce&#39;s match, a message to approve authentication will be sent to the application server.</div></body></html>

